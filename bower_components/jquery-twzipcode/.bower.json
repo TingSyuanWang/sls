@@ -1,0 +1,20 @@
+{
+  "name": "jquery-twzipcode",
+  "version": "1.7.8",
+  "description": "Taiwan zipcode plug-in for jQuery",
+  "dependencies": {
+    "jquery": "*"
+  },
+  "main": "jquery.twzipcode.js",
+  "homepage": "https://github.com/appleboy/jquery-twzipcode",
+  "_release": "1.7.8",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.7.8",
+    "commit": "fc43096464d130e116ea97f6c28088b76dc1ba51"
+  },
+  "_source": "https://github.com/appleboy/jquery-twzipcode.git",
+  "_target": "^1.7.8",
+  "_originalSource": "jquery-twzipcode",
+  "_direct": true
+}

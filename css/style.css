@@ -1,0 +1,28 @@
+.form-control {
+  border-radius: 0;
+}
+
+.formTitle {
+  font-size: 18px;
+}
+
+.radioMarginFix {
+  margin-top:6px;
+}
+
+.fontChange {
+  font-size: 20px;
+}
+
+.buttonMarginFix {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.inputMarginFix {
+  margin-top: 10px;
+}
+
+.successButton {
+  margin-top: 2em;
+}
