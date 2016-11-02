@@ -131,12 +131,14 @@
                   $("#unit").attr("placeholder", "學校名稱");
               });
               $('#inlineRadio1').click(function() {
-                 $('#selectschool').removeAttr("disabled")
+                 $('#selectschool').removeAttr("disabled");
+                 $("#unit").attr("placeholder", "請選學校");
                  $("#position").attr("placeholder", "系所");
               });
               $('#inlineRadio2').click(function() {
-                 $('#selectschool').attr("disabled", 'disabled')
-                 $("#position").attr("placeholder", "單位");
+                 $('#selectschool').attr("disabled", 'disabled');
+                 $("#unit").attr("placeholder", "單位");
+                 $("#position").attr("placeholder", "職稱");
               });
               // 測試是否取得值
               // $('#school').change(function() {
@@ -183,7 +185,7 @@
           <!-- col -->
           <div class="col-md-6">
             <div class="form-group">
-              <label for="event" class="formTitle">報名場次&nbsp;<a href="http://TESTFORWEB/2018expo/%E5%9F%B9%E8%A8%93%E5%A0%B4%E6%AC%A1/" target="_blank">(了解培訓場次資訊)</a></label>
+              <label for="event" class="formTitle">報名場次&nbsp;<a href="http://website/2018expo/%E5%9F%B9%E8%A8%93%E5%A0%B4%E6%AC%A1/" target="_blank">(了解培訓場次資訊)</a></label>
               <select id="selectevent" name="event" class="form-control input-lg" required>
                 <option>
                   請選擇
@@ -192,7 +194,7 @@
                   105.11.05(六)-06(日) 中國醫藥大學
                   <?php
                     $sql01="SELECT `id` FROM  `testbasic` WHERE `event`='105.11.05(六)-06(日) 中國醫藥大學'";
-                    $option1 = 7;
+                    $option1 = 120;
                     $result01 = mysql_query($sql01);
                     $result1 = mysql_num_rows($result01);
                     $option1result = $option1 - $result1;
@@ -263,11 +265,22 @@
                 $('#selectevent').change(function selectevent(){
                   var selectevent = $("#selectevent option:selected").val();
                   var endEvent = "已額滿，無法報名！";
+                  // 新增現在時間
+                  var localTime = new Date();
+                  var timeoutEvent = "時間已過，請報名其它場次！";
+                  var endEventTime1 = '2016/11/04 14:00:00';
+                  var endEventTime2 = '2016/11/04 14:00:00';
+                  var endEventTime3 = '2016/12/02 14:00:00';
+                  var endEventTime4 = '2016/12/02 14:00:00';
+                  var endEventTime5 = '2016/12/09 14:00:00';
+                  var endEventTime6 = '2016/12/09 14:00:00';
                   if (selectevent == "105.11.05(六)-06(日) 中國醫藥大學") {
                     var alert01 = new Array();
                     alert01 = "<?php echo $alert01;?>";
                     var alert01content = "剩餘報名人數：" + "<?php echo $alert01;?>";
-                    if (alert01 > 0) {
+                    if (Date.parse(localTime).valueOf() > Date.parse(endEventTime1).valueOf()) {
+                      $( "p02" ).html(timeoutEvent);
+                    } else if (alert01 > 0) {
                       $( "p02" ).html(alert01content);
                     } else {
                       $( "p02" ).html(endEvent);
@@ -276,7 +289,9 @@
                     var alert02 = new Array();
                     alert02 = "<?php echo $alert02;?>";
                     var alert02content = "剩餘報名人數：" + "<?php echo $alert02;?>";
-                    if (alert02 > 0) {
+                    if (Date.parse(localTime).valueOf() > Date.parse(endEventTime2).valueOf()) {
+                      $( "p02" ).html(timeoutEvent);
+                    } else if (alert02 > 0) {
                       $( "p02" ).html(alert02content);
                     } else {
                       $( "p02" ).html(endEvent);
@@ -285,7 +300,9 @@
                     var alert03 = new Array();
                     alert03 = "<?php echo $alert03;?>";
                     var alert03content = "剩餘報名人數：" + "<?php echo $alert03;?>";
-                    if (alert03 > 0) {
+                    if (Date.parse(localTime).valueOf() > Date.parse(endEventTime3).valueOf()) {
+                      $( "p02" ).html(timeoutEvent);
+                    } else if (alert03 > 0) {
                       $( "p02" ).html(alert03content);
                     } else {
                       $( "p02" ).html(endEvent);
@@ -294,7 +311,9 @@
                     var alert04 = new Array();
                     alert04 = "<?php echo $alert04;?>";
                     var alert04content = "剩餘報名人數：" + "<?php echo $alert04;?>";
-                    if (alert04 > 0) {
+                    if (Date.parse(localTime).valueOf() > Date.parse(endEventTime4).valueOf()) {
+                      $( "p02" ).html(timeoutEvent);
+                    } else if (alert04 > 0) {
                       $( "p02" ).html(alert04content);
                     } else {
                       $( "p02" ).html(endEvent);
@@ -303,7 +322,9 @@
                     var alert05 = new Array();
                     alert05 = "<?php echo $alert05;?>";
                     var alert05content = "剩餘報名人數：" + "<?php echo $alert05;?>";
-                    if (alert05 > 0) {
+                    if (Date.parse(localTime).valueOf() > Date.parse(endEventTime5).valueOf()) {
+                      $( "p02" ).html(timeoutEvent);
+                    } else if (alert05 > 0) {
                       $( "p02" ).html(alert05content);
                     } else {
                       $( "p02" ).html(endEvent);
@@ -312,7 +333,9 @@
                     var alert06 = new Array();
                     alert06 = "<?php echo $alert06;?>";
                     var alert06content = "剩餘報名人數：" + "<?php echo $alert06;?>";
-                    if (alert06 > 0) {
+                    if (Date.parse(localTime).valueOf() > Date.parse(endEventTime6).valueOf()) {
+                      $( "p02" ).html(timeoutEvent);
+                    } else if (alert06 > 0) {
                       $( "p02" ).html(alert06content);
                     } else {
                       $( "p02" ).html(endEvent);
@@ -332,46 +355,72 @@
             <script>
               $( "#submit001" ).click(function() {
                 var selectevent = $("#selectevent option:selected").val();
+                // 新增現在時間
+                var localTime = new Date();
+                var endEventTime1 = '2016/11/04 14:00:00';
+                var endEventTime2 = '2016/11/04 14:00:00';
+                var endEventTime3 = '2016/12/02 14:00:00';
+                var endEventTime4 = '2016/12/02 14:00:00';
+                var endEventTime5 = '2016/12/09 14:00:00';
+                var endEventTime6 = '2016/12/09 14:00:00';
                 if (selectevent == "105.11.05(六)-06(日) 中國醫藥大學") {
                   var alert01 = new Array();
                   alert01 = "<?php echo $alert01;?>";
-                  if (alert01 <= 0) {
-                    alert("該場次無法報名，請報名其他場次");
+                  if (Date.parse(localTime).valueOf() > Date.parse(endEventTime1).valueOf()) {
+                    alert("該場次時間已過，請報名其他場次");
+                    return false;
+                  } else if (alert01 <= 0) {
+                    alert("該場次人數已滿，請報名其他場次");
                     return false;
                   }
                 } else if (selectevent == "105.11.05(六)-06(日) 亞洲大學") {
                   var alert02 = new Array();
                   alert02 = "<?php echo $alert02;?>";
-                  if (alert02 <= 0) {
-                    alert("該場次無法報名，請報名其他場次");
+                  if (Date.parse(localTime).valueOf() > Date.parse(endEventTime2).valueOf()) {
+                    alert("該場次時間已過，請報名其他場次");
+                    return false;
+                  } else if (alert02 <= 0) {
+                    alert("該場次人數已滿，請報名其他場次");
                     return false;
                   }
                 } else if (selectevent == "105.12.03(六)-04(日) 靜宜大學") {
                   var alert03 = new Array();
                   alert03 = "<?php echo $alert03;?>";
-                  if (alert03 <= 0) {
-                    alert("該場次無法報名，請報名其他場次");
+                  if (Date.parse(localTime).valueOf() > Date.parse(endEventTime3).valueOf()) {
+                    alert("該場次時間已過，請報名其他場次");
+                    return false;
+                  } else if (alert03 <= 0) {
+                    alert("該場次人數已滿，請報名其他場次");
                     return false;
                   }
                 } else if (selectevent == "105.12.03(六)-04(日) 靜宜大學") {
                   var alert04 = new Array();
                   alert04 = "<?php echo $alert04;?>";
-                  if (alert04 <= 0) {
-                    alert("該場次無法報名，請報名其他場次");
+                  if (Date.parse(localTime).valueOf() > Date.parse(endEventTime4).valueOf()) {
+                    alert("該場次時間已過，請報名其他場次");
+                    return false;
+                  } else if (alert04 <= 0) {
+                    alert("該場次人數已滿，請報名其他場次");
                     return false;
                   }
                 } else if (selectevent == "105.12.10(六)-11(日) 亞洲大學") {
                   var alert05 = new Array();
                   alert05 = "<?php echo $alert05;?>";
-                  if (alert05 <= 0) {
-                    alert("該場次無法報名，請報名其他場次");
+                  if (Date.parse(localTime).valueOf() > Date.parse(endEventTime5).valueOf()) {
+                    alert("該場次時間已過，請報名其他場次");
+                    return false;
+                  } else if (alert05 <= 0) {
+                    alert("該場次人數已滿，請報名其他場次");
                     return false;
                   }
                 } else if (selectevent == "105.12.10(六)-11(日) 豐原高中") {
                   var alert06 = new Array();
                   alert06 = "<?php echo $alert06;?>";
-                  if (alert06 <= 0) {
-                    alert("該場次無法報名，請報名其他場次");
+                  if (Date.parse(localTime).valueOf() > Date.parse(endEventTime6).valueOf()) {
+                    alert("該場次時間已過，請報名其他場次");
+                    return false;
+                  } else if (alert06 <= 0) {
+                    alert("該場次人數已滿，請報名其他場次");
                     return false;
                   }
                 }

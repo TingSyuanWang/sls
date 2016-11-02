@@ -2,7 +2,7 @@
 	include("../db_setting.php");
 	if (!@mysql_select_db("2018exporegister")) die("資料庫無法連結");
 	if(isset($_POST["action"])&&($_POST["action"]=="update")){
-		$sql_query = "UPDATE `applyadvance` SET ";
+		$sql_query = "UPDATE `testadvance` SET ";
 		$sql_query .=  "`name`='".$_POST["name"]."',";
 		$sql_query .=  "`phone`='".$_POST["phone"]."',";
 		$sql_query .=  "`telephone`='".$_POST["telephone"]."',";
@@ -19,7 +19,7 @@
 		// redirect
 		header("Location: advance.php");
 	}
-	$sql_db = "SELECT * FROM `applyadvance` WHERE `id`=".$_GET["id"];
+	$sql_db = "SELECT * FROM `testadvance` WHERE `id`=".$_GET["id"];
 	$result = mysql_query($sql_db);
 	$row_result=mysql_fetch_assoc($result);
 ?>
