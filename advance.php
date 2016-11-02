@@ -188,7 +188,7 @@
                   105.10.30(日) 亞洲大學
                   <?php
                     $sql01="SELECT `id` FROM  `testadvance` WHERE `event`='105.10.30(日) 亞洲大學'";
-                    $option1 = 56;
+                    $option1 = 1;
                     $result01 = mysql_query($sql01);
                     $result1 = mysql_num_rows($result01);
                     $option1result = $option1 - $result1;
@@ -199,7 +199,7 @@
                   105.11.12(六) 中國醫藥大學
                   <?php
                     $sql02="SELECT `id` FROM  `testadvance` WHERE `event`='105.11.12(六) 中國醫藥大學'";
-                    $option2 = 120;
+                    $option2 = 0;
                     $result02 = mysql_query($sql02);
                     $result2 = mysql_num_rows($result02);
                     $option2result = $option2 - $result2;
@@ -465,24 +465,33 @@
           </div>
           <!-- col -->
           <div class="col-md-12 center-block buttonMarginFix">
-            <input name="action" type="hidden" value="upload_file_advance.php" />
-            <div class="text-center"><input type="submit" class="btn btn-primary btn-lg"></input></div>
-          </div>
+            <input id="submit" name="action" type="hidden" value="upload_file_advance.php" />
+            <div class="text-center"><input id="submit001" type="submit" class="btn btn-primary btn-lg"></input></div>
           <script>
+          // 新增現在時間
+          var localTime = new Date();
+          var endEventTime1 = '2016/10/30 00:00:00';
+          var endEventTime2 = '2016/11/30 00:00:00';
             $( "#submit001" ).click(function() {
               var selectevent = $("#selectevent option:selected").val();
               if (selectevent == "105.10.30(日) 亞洲大學") {
                 var alert01 = new Array();
                 alert01 = "<?php echo $alert01;?>";
-                if (alert01 <= 0) {
-                  alert("該場次無法報名，請報名其他場次");
+                if (Date.parse(localTime).valueOf() > Date.parse(endEventTime1).valueOf()) {
+                  alert("該場次時間已過，請報名其他場次");
+                  return false;
+                } else if (alert01 <= 0) {
+                  alert("該場次人數已滿，請報名其他場次");
                   return false;
                 }
               } else if (selectevent == "105.11.12(六) 中國醫藥大學") {
                 var alert02 = new Array();
                 alert02 = "<?php echo $alert02;?>";
-                if (alert02 <= 0) {
-                  alert("該場次無法報名，請報名其他場次");
+                if (Date.parse(localTime).valueOf() > Date.parse(endEventTime2).valueOf()) {
+                  alert("該場次時間已過，請報名其他場次");
+                  return false;
+                } else if (alert02 <= 0) {
+                  alert("該場次人數已滿，請報名其他場次");
                   return false;
                 }
               } else if (selectevent == "105.11.13(日) 科博館") {
@@ -558,6 +567,7 @@
               }
             });
           </script>
+        </div>
           <div class="col-md-12">
             <div class="well well-lg fontChange">
               備註:<br />

@@ -192,7 +192,7 @@
                   105.11.05(六)-06(日) 中國醫藥大學
                   <?php
                     $sql01="SELECT `id` FROM  `testbasic` WHERE `event`='105.11.05(六)-06(日) 中國醫藥大學'";
-                    $option1 = 120;
+                    $option1 = 7;
                     $result01 = mysql_query($sql01);
                     $result1 = mysql_num_rows($result01);
                     $option1result = $option1 - $result1;
