@@ -226,7 +226,7 @@
                     $option4 = 100;
                     $result04 = mysql_query($sql04);
                     $result4 = mysql_num_rows($result04);
-                    $option4result = $option1 - $result4;
+                    $option4result = $option4 - $result4;
                     $alert04 = json_encode($option4result);
                   ?>
                 </option>
