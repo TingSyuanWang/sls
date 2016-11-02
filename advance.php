@@ -325,25 +325,38 @@
                 $('#selectevent').change(function selectevent(){
                   var selectevent = $("#selectevent option:selected").val();
                   var endEvent = "已額滿，無法報名！";
-                  var timeoutEvent = "已結束，無法報名！"
+                  // 新增現在時間
+                  var localTime = new Date();
+                  var timeoutEvent = "時間已過，請報名其它場次！";
+                  var endEventTime1 = '2016/10/30 00:00:00';
+                  var endEventTime2 = '2016/11/02 15:00:00';
                   if (selectevent == "105.10.30(日) 亞洲大學") {
                     var alert01 = new Array();
                     alert01 = "<?php echo $alert01;?>";
                     var alert01content = "剩餘報名人數：" + "<?php echo $alert01;?>";
-                    if (alert01 > 0) {
+                    if (Date.parse(localTime).valueOf() > Date.parse(endEventTime1).valueOf()) {
+                      $( "p02" ).html(timeoutEvent);
+                    } else if (alert01 > 0) {
                       $( "p02" ).html(alert01content);
                     } else {
-                      $( "p02" ).html(timeoutEvent);
+                      $( "p02" ).html(endEvent);
                     }
                   } else if (selectevent == "105.11.12(六) 中國醫藥大學") {
                     var alert02 = new Array();
                     alert02 = "<?php echo $alert02;?>";
                     var alert02content = "剩餘報名人數：" + "<?php echo $alert02;?>";
-                    if (alert02 > 0) {
+                    if (Date.parse(localTime).valueOf() > Date.parse(endEventTime2).valueOf()) {
+                      $( "p02" ).html(timeoutEvent);
+                    } else if (alert02 > 0) {
                       $( "p02" ).html(alert02content);
                     } else {
                       $( "p02" ).html(endEvent);
                     }
+                    // if (alert02 > 0) {
+                    //   $( "p02" ).html(alert02content);
+                    // } else {
+                    //   $( "p02" ).html(endEvent);
+                    // }
                   } else if (selectevent == "105.11.13(日) 科博館") {
                     var alert03 = new Array();
                     alert03 = "<?php echo $alert03;?>";
