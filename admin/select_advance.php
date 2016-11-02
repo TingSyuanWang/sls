@@ -15,43 +15,43 @@ if (!$seldb) die("資料庫無法連結");
 $sqlevent = null;
 switch ($q) {
     case 0:
-        $sql = "SELECT * FROM `applyadvance` ORDER BY `id`";
+        $sql = "SELECT * FROM `testadvance` ORDER BY `id`";
         break;
     case 1:
-        $sql = "SELECT * FROM  `applyadvance` WHERE `event`='105.10.30(日) 亞洲大學' ORDER BY `id`";
+        $sql = "SELECT * FROM  `testadvance` WHERE `event`='105.10.30(日) 亞洲大學' ORDER BY `id`";
         break;
     case 2:
-        $sql = "SELECT * FROM  `applyadvance` WHERE `event`='105.11.12(六) 中國醫藥大學' ORDER BY `id`";
+        $sql = "SELECT * FROM  `testadvance` WHERE `event`='105.11.12(六) 中國醫藥大學' ORDER BY `id`";
         break;
     case 3:
-        $sql = "SELECT * FROM  `applyadvance` WHERE `event`='105.11.13(日) 科博館' ORDER BY `id`";
+        $sql = "SELECT * FROM  `testadvance` WHERE `event`='105.11.13(日) 科博館' ORDER BY `id`";
         break;
     case 4:
-        $sql = "SELECT * FROM  `applyadvance` WHERE `event`='105.11.16(三)-17(四) 亞洲大學' ORDER BY `id`";
+        $sql = "SELECT * FROM  `testadvance` WHERE `event`='105.11.16(三)-17(四) 亞洲大學' ORDER BY `id`";
         break;
     case 5:
-        $sql = "SELECT * FROM  `applyadvance` WHERE `event`='105.11.20(日) 科博館' ORDER BY `id`";
+        $sql = "SELECT * FROM  `testadvance` WHERE `event`='105.11.20(日) 科博館' ORDER BY `id`";
         break;
     case 6:
-        $sql = "SELECT * FROM  `applyadvance` WHERE `event`='105.11.26(六) 豐原高中' ORDER BY `id`";
+        $sql = "SELECT * FROM  `testadvance` WHERE `event`='105.11.26(六) 豐原高中' ORDER BY `id`";
         break;
     case 7:
-        $sql = "SELECT * FROM  `applyadvance` WHERE `event`='105.11.27(日) 科博館' ORDER BY `id`";
+        $sql = "SELECT * FROM  `testadvance` WHERE `event`='105.11.27(日) 科博館' ORDER BY `id`";
         break;
     case 8:
-        $sql = "SELECT * FROM  `applyadvance` WHERE `event`='105.11.30(三)-12.01(四) 亞洲大學' ORDER BY `id`";
+        $sql = "SELECT * FROM  `testadvance` WHERE `event`='105.11.30(三)-12.01(四) 亞洲大學' ORDER BY `id`";
         break;
     case 9:
-        $sql = "SELECT * FROM  `applyadvance` WHERE `event`='105.12.17(六) 中國醫藥大學' ORDER BY `id`";
+        $sql = "SELECT * FROM  `testadvance` WHERE `event`='105.12.17(六) 中國醫藥大學' ORDER BY `id`";
         break;
     case 10:
-        $sql = "SELECT * FROM  `applyadvance` WHERE `event`='105.12.18(日) 豐原高中' ORDER BY `id`";
+        $sql = "SELECT * FROM  `testadvance` WHERE `event`='105.12.18(日) 豐原高中' ORDER BY `id`";
         break;
     case 11:
-        $sql = "SELECT * FROM  `applyadvance` WHERE `event`='105.12.24(六) 靜宜大學' ORDER BY `id`";
+        $sql = "SELECT * FROM  `testadvance` WHERE `event`='105.12.24(六) 靜宜大學' ORDER BY `id`";
         break;
     case 12:
-        $sql = "SELECT * FROM  `applyadvance` WHERE `event`='105.12.24(六) 科博館' ORDER BY `id`";
+        $sql = "SELECT * FROM  `testadvance` WHERE `event`='105.12.24(六) 科博館' ORDER BY `id`";
         break;
 }
 $result = mysql_query($sql);

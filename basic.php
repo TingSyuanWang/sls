@@ -2,7 +2,7 @@
   include("db_setting.php");
   if (!@mysql_select_db("2018exporegister")) die("fail to connect to server!");
 
-  // $sql="SELECT `id` FROM  `applybasic` WHERE `event`='105.12.10(六)-11(日) 亞洲大學'";
+  // $sql="SELECT `id` FROM  `testbasic` WHERE `event`='105.12.10(六)-11(日) 亞洲大學'";
   // $result=mysql_query($sql) or die("查詢失敗");
   // echo mysql_num_rows($result);
 ?>
@@ -191,7 +191,7 @@
                 <option id="event01">
                   105.11.05(六)-06(日) 中國醫藥大學
                   <?php
-                    $sql01="SELECT `id` FROM  `applybasic` WHERE `event`='105.11.05(六)-06(日) 中國醫藥大學'";
+                    $sql01="SELECT `id` FROM  `testbasic` WHERE `event`='105.11.05(六)-06(日) 中國醫藥大學'";
                     $option1 = 120;
                     $result01 = mysql_query($sql01);
                     $result1 = mysql_num_rows($result01);
@@ -202,7 +202,7 @@
                 <option id="event02">
                   105.11.05(六)-06(日) 亞洲大學
                   <?php
-                    $sql02="SELECT `id` FROM  `applybasic` WHERE `event`='105.11.05(六)-06(日) 亞洲大學'";
+                    $sql02="SELECT `id` FROM  `testbasic` WHERE `event`='105.11.05(六)-06(日) 亞洲大學'";
                     $option2 = 120;
                     $result02 = mysql_query($sql02);
                     $result2 = mysql_num_rows($result02);
@@ -213,7 +213,7 @@
                 <option id="event03">
                   105.12.03(六)-04(日) 靜宜大學
                   <?php
-                    $sql03="SELECT `id` FROM  `applybasic` WHERE `event`='105.12.03(六)-04(日) 靜宜大學'";
+                    $sql03="SELECT `id` FROM  `testbasic` WHERE `event`='105.12.03(六)-04(日) 靜宜大學'";
                     $option3 = 100;
                     $result03 = mysql_query($sql03);
                     $result3 = mysql_num_rows($result03);
@@ -224,7 +224,7 @@
                 <option id="event04">
                   105.12.03(六)-04(日) 科博館
                   <?php
-                    $sql04="SELECT `id` FROM  `applybasic` WHERE `event`='105.12.03(六)-04(日) 科博館'";
+                    $sql04="SELECT `id` FROM  `testbasic` WHERE `event`='105.12.03(六)-04(日) 科博館'";
                     $option4 = 130;
                     $result04 = mysql_query($sql04);
                     $result4 = mysql_num_rows($result04);
@@ -235,7 +235,7 @@
                 <option id="event05">
                   105.12.10(六)-11(日) 亞洲大學
                   <?php
-                    $sql05="SELECT `id` FROM  `applybasic` WHERE `event`='105.12.10(六)-11(日) 亞洲大學'";
+                    $sql05="SELECT `id` FROM  `testbasic` WHERE `event`='105.12.10(六)-11(日) 亞洲大學'";
                     $option5 = 150;
                     $result05 = mysql_query($sql05);
                     $result5 = mysql_num_rows($result05);
@@ -246,7 +246,7 @@
                 <option id="event06">
                   105.12.10(六)-11(日) 豐原高中
                   <?php
-                    $sql06="SELECT `id` FROM  `applybasic` WHERE `event`='105.12.10(六)-11(日) 豐原高中'";
+                    $sql06="SELECT `id` FROM  `testbasic` WHERE `event`='105.12.10(六)-11(日) 豐原高中'";
                     $option6 = 130;
                     $result06 = mysql_query($sql06);
                     $result6 = mysql_num_rows($result06);

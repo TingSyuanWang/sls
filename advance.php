@@ -36,7 +36,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="name" class="formTitle">姓名</label>
-              <input type="text" class="form-control input-lg" id="name" name="name" placeholder="姓名" required>
+              <input type="text" class="form-control input-lg" id="name" name="name" placeholder="姓名" >
             </div>
             <!-- form-group -->
           </div>
@@ -44,7 +44,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="phone" class="formTitle">電話</label>
-              <input type="text" class="form-control input-lg" id="phone" name="phone" placeholder="電話" required>
+              <input type="text" class="form-control input-lg" id="phone" name="phone" placeholder="電話" >
             </div>
             <!-- form-group -->
           </div>
@@ -52,7 +52,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="telephone" class="formTitle">手機</label>
-              <input type="text" class="form-control input-lg" id="telephone" name="telephone" placeholder="手機" required>
+              <input type="text" class="form-control input-lg" id="telephone" name="telephone" placeholder="手機" >
             </div>
             <!-- form-group -->
           </div>
@@ -60,7 +60,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="identification" class="formTitle">身份證字號</label>
-              <input type="text" class="form-control input-lg" id="identification" name="identification" placeholder="身份證字號" required>
+              <input type="text" class="form-control input-lg" id="identification" name="identification" placeholder="身份證字號" >
             </div>
             <!-- form-group -->
           </div>
@@ -69,7 +69,7 @@
               <div class="form-group">
                   <label for="birthday" class="formTitle">生日(參與本活動需滿18歲)</label>
                   <div class='input-group date' id='birthday'>
-                      <input type='text' class="form-control input-lg" name="birthday" required/>
+                      <input type='text' class="form-control input-lg" name="birthday" />
                       <span class="input-group-addon">
                           <span class="glyphicon glyphicon-calendar">
                           </span>
@@ -90,7 +90,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="email" class="formTitle">E-mail</label>
-              <input type="email" class="form-control input-lg" id="email" name="email" placeholder="E-mail" required>
+              <input type="email" class="form-control input-lg" id="email" name="email" placeholder="E-mail" >
             </div>
             <!-- form-group -->
           </div>
@@ -98,7 +98,7 @@
           <div class="col-md-12">
             <div class="form-group">
               <label for="address" class="formTitle">地址</label>
-              <input type="text" class="form-control input-lg" id="address" name="address" placeholder="地址" required>
+              <input type="text" class="form-control input-lg" id="address" name="address" placeholder="地址" >
             </div>
             <!-- form-group -->
           </div>
@@ -117,7 +117,7 @@
                   <!-- insert this line -->
                   <span class="input-group-addon" style="width:0px; padding-left:0px; padding-right:0px; border:none;"></span>
               </div>
-              <input type="text" class="form-control input-lg radioMarginFix" id="unit" name="unit" placeholder="" required>
+              <input type="text" class="form-control input-lg radioMarginFix" id="unit" name="unit" placeholder="" >
               <script>
               $('#selectschool').change(function selectschool(){
                 var selectschool = $("#selectschool option:selected").text();
@@ -147,7 +147,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="position" class="formTitle"><p00></p00></label>
-              <input type="text" class="form-control input-lg inputMarginFix" id="position" name="position" placeholder="" required>
+              <input type="text" class="form-control input-lg inputMarginFix" id="position" name="position" placeholder="" >
             </div>
             <!-- form-group -->
           </div>
@@ -169,7 +169,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="food" class="formTitle">飲食習慣</label>
-              <select name="food" class="form-control input-lg required">
+              <select name="food" class="form-control input-lg ">
                 <option>葷食</option>
                 <option>素食</option>
               </select>
@@ -180,14 +180,14 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="event" class="formTitle">報名場次&nbsp;<a href="http://TESTFORWEB/2018expo/%E5%9F%B9%E8%A8%93%E5%A0%B4%E6%AC%A1/" target="_blank">(了解培訓場次資訊)</a></label>
-              <select id="selectevent" name="event" class="form-control input-lg required">
+              <select id="selectevent" name="event" class="form-control input-lg ">
                 <option>
                   請選擇
                 </option>
                 <option id="event01">
                   105.10.30(日) 亞洲大學
                   <?php
-                    $sql01="SELECT `id` FROM  `applyadvance` WHERE `event`='105.10.30(日) 亞洲大學'";
+                    $sql01="SELECT `id` FROM  `testadvance` WHERE `event`='105.10.30(日) 亞洲大學'";
                     $option1 = 56;
                     $result01 = mysql_query($sql01);
                     $result1 = mysql_num_rows($result01);
@@ -198,7 +198,7 @@
                 <option id="event02">
                   105.11.12(六) 中國醫藥大學
                   <?php
-                    $sql02="SELECT `id` FROM  `applyadvance` WHERE `event`='105.11.12(六) 中國醫藥大學'";
+                    $sql02="SELECT `id` FROM  `testadvance` WHERE `event`='105.11.12(六) 中國醫藥大學'";
                     $option2 = 120;
                     $result02 = mysql_query($sql02);
                     $result2 = mysql_num_rows($result02);
@@ -209,7 +209,7 @@
                 <option id="event03">
                   105.11.13(日) 科博館
                   <?php
-                    $sql03="SELECT `id` FROM  `applyadvance` WHERE `event`='105.11.13(日) 科博館'";
+                    $sql03="SELECT `id` FROM  `testadvance` WHERE `event`='105.11.13(日) 科博館'";
                     $option3 = 120;
                     $result03 = mysql_query($sql03);
                     $result3 = mysql_num_rows($result03);
@@ -220,7 +220,7 @@
                 <option id="event04">
                   105.11.16(三)-17(四) 亞洲大學
                   <?php
-                    $sql04="SELECT `id` FROM  `applyadvance` WHERE `event`='105.11.16(三)-17(四) 亞洲大學'";
+                    $sql04="SELECT `id` FROM  `testadvance` WHERE `event`='105.11.16(三)-17(四) 亞洲大學'";
                     $option4 = 75;
                     $result04 = mysql_query($sql04);
                     $result4 = mysql_num_rows($result04);
@@ -231,7 +231,7 @@
                 <option id="event05">
                   105.11.20(日) 科博館
                   <?php
-                    $sql05="SELECT `id` FROM  `applyadvance` WHERE `event`='105.11.20(日) 科博館'";
+                    $sql05="SELECT `id` FROM  `testadvance` WHERE `event`='105.11.20(日) 科博館'";
                     $option5 = 120;
                     $result05 = mysql_query($sql05);
                     $result5 = mysql_num_rows($result05);
@@ -242,7 +242,7 @@
                 <option id="event06">
                   105.11.26(六) 豐原高中
                   <?php
-                    $sql06="SELECT `id` FROM  `applyadvance` WHERE `event`='105.11.26(六) 豐原高中'";
+                    $sql06="SELECT `id` FROM  `testadvance` WHERE `event`='105.11.26(六) 豐原高中'";
                     $option6 = 150;
                     $result06 = mysql_query($sql06);
                     $result6 = mysql_num_rows($result06);
@@ -253,7 +253,7 @@
                 <option id="event07">
                   105.11.27(日) 科博館
                   <?php
-                    $sql07="SELECT `id` FROM  `applyadvance` WHERE `event`='105.11.27(日) 科博館'";
+                    $sql07="SELECT `id` FROM  `testadvance` WHERE `event`='105.11.27(日) 科博館'";
                     $option7 = 120;
                     $result07 = mysql_query($sql07);
                     $result7 = mysql_num_rows($result07);
@@ -264,7 +264,7 @@
                 <option id="event08">
                   105.11.30(三)-12.01(四) 亞洲大學
                   <?php
-                    $sql08="SELECT `id` FROM  `applyadvance` WHERE `event`='105.11.30(三)-12.01(四) 亞洲大學'";
+                    $sql08="SELECT `id` FROM  `testadvance` WHERE `event`='105.11.30(三)-12.01(四) 亞洲大學'";
                     $option8 = 75;
                     $result08 = mysql_query($sql08);
                     $result8 = mysql_num_rows($result08);
@@ -275,7 +275,7 @@
                 <option id="event09">
                   105.12.17(六) 中國醫藥大學
                   <?php
-                    $sql09="SELECT `id` FROM  `applyadvance` WHERE `event`='105.12.17(六) 中國醫藥大學'";
+                    $sql09="SELECT `id` FROM  `testadvance` WHERE `event`='105.12.17(六) 中國醫藥大學'";
                     $option9 = 120;
                     $result09 = mysql_query($sql09);
                     $result9 = mysql_num_rows($result09);
@@ -286,7 +286,7 @@
                 <option id="event010">
                   105.12.18(日) 豐原高中
                   <?php
-                    $sql010="SELECT `id` FROM  `applyadvance` WHERE `event`='105.12.18(日) 豐原高中'";
+                    $sql010="SELECT `id` FROM  `testadvance` WHERE `event`='105.12.18(日) 豐原高中'";
                     $option10 = 150;
                     $result010 = mysql_query($sql010);
                     $result10 = mysql_num_rows($result010);
@@ -297,7 +297,7 @@
                 <option id="event011">
                   105.12.24(六) 靜宜大學
                   <?php
-                    $sql011="SELECT `id` FROM  `applyadvance` WHERE `event`='105.12.24(六) 靜宜大學'";
+                    $sql011="SELECT `id` FROM  `testadvance` WHERE `event`='105.12.24(六) 靜宜大學'";
                     $option11 = 100;
                     $result011 = mysql_query($sql011);
                     $result11 = mysql_num_rows($result011);
@@ -308,7 +308,7 @@
                 <option id="event012">
                   105.12.24(六) 科博館
                   <?php
-                    $sql012="SELECT `id` FROM  `applyadvance` WHERE `event`='105.12.24(六) 科博館'";
+                    $sql012="SELECT `id` FROM  `testadvance` WHERE `event`='105.12.24(六) 科博館'";
                     $option12 = 150;
                     $result012 = mysql_query($sql012);
                     $result12 = mysql_num_rows($result012);
@@ -446,7 +446,7 @@
           <div class="col-md-12">
             <div class="form-group">
               <label for="attachment" class="formTitle">附件上傳(檔名請使用：日期+姓名[例:20161001王大明])<br />若檔案較大，請耐心等待頁面跳轉，勿重複送出。</label>
-              <input type="file" id="attachment" name="attachment" class="formTitle" required>
+              <input type="file" id="attachment" name="attachment" class="formTitle" >
             </div>
             <!-- form-group -->
           </div>
