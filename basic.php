@@ -85,7 +85,8 @@
               $(function () {
                   $('#birthday').datetimepicker({
                       format: 'YYYY-MM-DD',
-                      maxDate: moment().subtract(18, 'years'),
+                      // maxDate: moment().subtract(18, 'years'),
+                      maxDate: moment("01-01-1999", "MM-DD-YYYY");
                       viewMode: 'years',
                       locale:'zh-tw'
                   });
