@@ -36,7 +36,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="name" class="formTitle">姓名</label>
-              <input type="text" class="form-control input-lg" id="name" name="name" placeholder="姓名" required>
+              <input type="text" class="form-control input-lg" id="name" name="name" placeholder="姓名">
             </div>
             <!-- form-group -->
           </div>
@@ -44,7 +44,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="phone" class="formTitle">電話</label>
-              <input type="text" class="form-control input-lg" id="phone" name="phone" placeholder="電話" required>
+              <input type="text" class="form-control input-lg" id="phone" name="phone" placeholder="電話">
             </div>
             <!-- form-group -->
           </div>
@@ -52,7 +52,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="telephone" class="formTitle">手機</label>
-              <input type="text" class="form-control input-lg" id="telephone" name="telephone" placeholder="手機" required>
+              <input type="text" class="form-control input-lg" id="telephone" name="telephone" placeholder="手機">
             </div>
             <!-- form-group -->
           </div>
@@ -60,7 +60,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="identification" class="formTitle">身份證字號</label>
-              <input type="text" class="form-control input-lg" id="identification" name="identification" placeholder="身份證字號" required>
+              <input type="text" class="form-control input-lg" id="identification" name="identification" placeholder="身份證字號">
             </div>
             <!-- form-group -->
           </div>
@@ -69,7 +69,7 @@
               <div class="form-group">
                   <label for="birthday" class="formTitle">生日(參與本活動需滿18歲)</label>
                   <div class='input-group date' id='birthday'>
-                      <input type='text' class="form-control input-lg" name="birthday" required/>
+                      <input type='text' class="form-control input-lg" name="birthday"/>
                       <span class="input-group-addon">
                           <span class="glyphicon glyphicon-calendar">
                           </span>
@@ -90,7 +90,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="email" class="formTitle">E-mail</label>
-              <input type="email" class="form-control input-lg" id="email" name="email" placeholder="E-mail" required>
+              <input type="email" class="form-control input-lg" id="email" name="email" placeholder="E-mail">
             </div>
             <!-- form-group -->
           </div>
@@ -98,7 +98,7 @@
           <div class="col-md-12">
             <div class="form-group">
               <label for="address" class="formTitle">地址</label>
-              <input type="text" class="form-control input-lg" id="address" name="address" placeholder="地址" required>
+              <input type="text" class="form-control input-lg" id="address" name="address" placeholder="地址">
             </div>
             <!-- form-group -->
           </div>
@@ -117,7 +117,7 @@
                   <!-- insert this line -->
                   <span class="input-group-addon" style="width:0px; padding-left:0px; padding-right:0px; border:none;"></span>
               </div>
-              <input type="text" class="form-control input-lg radioMarginFix" id="unit" name="unit" placeholder="" required>
+              <input type="text" class="form-control input-lg radioMarginFix" id="unit" name="unit" placeholder="">
               <script>
               $('#selectschool').change(function selectschool(){
                 var selectschool = $("#selectschool option:selected").text();
@@ -149,7 +149,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="position" class="formTitle"><p00></p00></label>
-              <input type="text" class="form-control input-lg inputMarginFix" id="position" name="position" placeholder="" required>
+              <input type="text" class="form-control input-lg inputMarginFix" id="position" name="position" placeholder="">
             </div>
             <!-- form-group -->
           </div>
@@ -171,7 +171,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="food" class="formTitle">飲食習慣</label>
-              <select name="food" class="form-control input-lg required">
+              <select name="food" class="form-control input-lg">
                 <option>葷食</option>
                 <option>素食</option>
               </select>
@@ -182,7 +182,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="event" class="formTitle">報名場次&nbsp;<a href="http://website/2018expo/%E5%9F%B9%E8%A8%93%E5%A0%B4%E6%AC%A1/" target="_blank">(了解培訓場次資訊)</a></label>
-              <select id="selectevent" name="event" class="form-control input-lg required">
+              <select id="selectevent" name="event" class="form-control input-lg">
                 <option>
                   請選擇
                 </option>
@@ -486,7 +486,7 @@
           <div class="col-md-12">
             <div class="form-group">
               <label for="attachment" class="formTitle">附件上傳(檔名請使用：日期+姓名[例:20161001王大明])<br />若檔案較大，請耐心等待頁面跳轉，勿重複送出。</label>
-              <input type="file" id="attachment" name="attachment" class="formTitle" required>
+              <input type="file" id="attachment" name="attachment" class="formTitle">
             </div>
             <!-- form-group -->
           </div>
