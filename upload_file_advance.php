@@ -28,7 +28,7 @@
 		$headers .= "From: 亞大花博伺服器-勿直接回信 <openstackicehousegeek@gmail.com>"; //寄件者
 		mail("$to", "$subject", "$message", "$headers");
 
-		$sql_query = "INSERT INTO applyadvance (`name`, `phone`, `telephone`, `identification`, `birthday`, `email`, `address`, `unit`, `position`, `food`, `event`, `attachment`) VALUES (";
+		$sql_query = "INSERT INTO testadvance (`name`, `phone`, `telephone`, `identification`, `birthday`, `email`, `address`, `unit`, `position`, `food`, `event`, `attachment`) VALUES (";
 		$sql_query .=  "'".$_POST["name"]."',";
 		$sql_query .=  "'".$_POST["phone"]."',";
 		$sql_query .=  "'".$_POST["telephone"]."',";
@@ -101,7 +101,7 @@
 								</span>
 							</button>
 						</a>
-						<a href="http://sls.asia.edu.tw/2018expo">
+						<a href="http://website/2018expo">
 							<button type="button" class="btn btn-success btn-lg btn-block successButton">
 								<span>
 									回到首頁

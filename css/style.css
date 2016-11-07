@@ -26,3 +26,7 @@
 .successButton {
   margin-top: 2em;
 }
+
+.deleteLine {
+  text-decoration:line-through;
+}

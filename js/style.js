@@ -1,6 +1,6 @@
-<script type="text/javascript">
+// JavaScript Document
 
-{/* 偵測server的時間 */}
+// 偵測server的時間
 var xmlHttp;
 function srvTime(){
 try {
@@ -30,6 +30,4 @@ return xmlHttp.getResponseHeader("Date");
 
 var st = srvTime();
 var date = new Date(st);
-{/* 結束偵測server的時間 */}
-
-</script>
+// 結束偵測server的時間 

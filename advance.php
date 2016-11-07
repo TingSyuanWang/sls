@@ -356,7 +356,7 @@
                   } else if (selectevent == "105.11.12(六) 中國醫藥大學") {
                     var alert02 = new Array();
                     alert02 = "<?php echo $alert02;?>";
-                    var alert02content = "剩餘報名人數：" + "<?php echo $alert02;?>";
+                    var alert02content = "剩餘報名人數：" + "<?php echo $alert02;?>" + "&nbsp;&nbsp;&nbsp;&nbsp;<strong>備註：本場次含外師課程</strong>";
                     if (Date.parse(localTime).valueOf() > Date.parse(endEventTime2).valueOf()) {
                       $( "p02" ).html(timeoutEvent);
                     } else if (alert02 > 0) {
@@ -486,13 +486,27 @@
           <div class="col-md-12">
             <div class="form-group">
               <label for="attachment" class="formTitle">附件上傳(檔名請使用：日期+姓名[例:20161001王大明])<br />若檔案較大，請耐心等待頁面跳轉，勿重複送出。</label>
-              <input type="file" id="attachment" name="attachment" class="formTitle">
+              <input type="file" id="attachment" name="attachment" class="formTitle" accept=".pdf,.jpg,.jpeg,.png,.gif">
+              <script type="text/JavaScript">
+              <!-- Begin
+              function TestFileType( fileName, fileTypes ) {
+              if (!fileName) return;
+
+              dots = fileName.split(".")
+              //get the part AFTER the LAST period.
+              fileType = "." + dots[dots.length-1];
+
+              return (fileTypes.join(".").indexOf(fileType) != -1) ?
+              alert('That file is OK!') :
+              alert("Please only upload files that end in types: \n\n" + (fileTypes.join(" .")) + "\n\nPlease select a new file and try again.");
+              }
+              </script>
             </div>
             <!-- form-group -->
           </div>
           <!-- col -->
           <div class="col-md-12 center-block buttonMarginFix">
-            <input id="submit" name="action" type="hidden" value="upload_file_advance.php" />
+            <input id="submit" name="action" type="hidden" value="upload_file_advance.php" onClick="TestFileType(this.form.uploadfile.value, ['gif', 'jpg', 'png', 'jpeg']);" />
             <div class="text-center"><input id="submit001" type="submit" class="btn btn-primary btn-lg"></input></div>
           <script>
             $( "#submit001" ).click(function() {
