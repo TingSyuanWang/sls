@@ -162,8 +162,6 @@
               else
                 $( "p00" ).html("職稱");
             });
-            $( "input" ).change( organization );
-            organization();
 					</script>
         </div>
         <!-- row -->
