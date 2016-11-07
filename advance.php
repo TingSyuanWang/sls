@@ -485,19 +485,25 @@
             <div class="form-group">
               <label for="attachment" class="formTitle">附件上傳(檔名請使用：日期+姓名[例:20161001王大明])<br />若檔案較大，請耐心等待頁面跳轉，勿重複送出。</label>
               <input type="file" id="attachment" name="attachment" class="formTitle" accept=".pdf,.jpg,.jpeg,.png,.gif">
-              <script type="text/JavaScript">
-              <!-- Begin
-              function TestFileType( fileName, fileTypes ) {
-              if (!fileName) return;
-
-              dots = fileName.split(".")
-              //get the part AFTER the LAST period.
-              fileType = "." + dots[dots.length-1];
-
-              return (fileTypes.join(".").indexOf(fileType) != -1) ?
-              alert('That file is OK!') :
-              alert("Please only upload files that end in types: \n\n" + (fileTypes.join(" .")) + "\n\nPlease select a new file and try again.");
-              }
+              <script>
+              $("#attachment").change(function() {
+                 var val = $(this).val();
+                 switch(val.substring(val.lastIndexOf('.') + 1).toLowerCase()){
+                     case 'pdf': case 'jpg': case 'jpeg': case 'png': case 'gif':
+                         break;
+                     default:
+                         $(this).val('');
+                         // error message here
+                         alert("不支援您所選擇的檔案格式，請重新選擇！");
+                         break;
+                 }
+              });
+              $('#attachment').bind('change', function() {
+                if (this.files[0].size > 10000000) {
+                  alert("超過檔案限制上傳限制，檔案請勿大於10MB");
+                  return false;
+                }
+              });
               </script>
             </div>
             <!-- form-group -->
@@ -522,6 +528,11 @@
               var endEventTime10 = '2016/12/16 14:00:00';
               var endEventTime11 = '2016/12/23 14:00:00';
               var endEventTime12 = '2016/12/23 14:00:00';
+              var fsize = $('#attachment')[0].files[0].size;
+              if (fsize > 10000000) {
+                alert("超過檔案限制上傳限制，請重新選擇檔案！");
+                return false;
+              }
               if (selectevent == "105.10.30(日) 亞洲大學") {
                 var alert01 = new Array();
                 alert01 = "<?php echo $alert01;?>";
