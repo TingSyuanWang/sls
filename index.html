@@ -25,12 +25,13 @@
 		<br />
 		<div class="row">
 			<div class="col-md-12">
-				<div class="marquee" id="marquee1"><b>【公告】</b>11/13科博館場次，因人數不足，故取消該場次培訓。不便之處，敬請見諒。</div>
+				<div class="marquee hidden-sm hidden-xs" id="marquee1"><b>【公告】</b>11/13科博館場次，因人數不足，故取消該場次培訓。不便之處，敬請見諒。</div>
+				<div class="marquee hidden-md hidden-lg" id="marquee2"><b>【公告】</b>11/13科博館場次，因人數不足，故取消該場次培訓。不便之處，敬請見諒。</div>
 				<script>
 				setInterval(function(){
 				    $('#marquee1').marquee('toggle');
 				},2000);
-				$('.marquee').marquee({
+				$('#marquee1').marquee({
 					//speed in milliseconds of the marquee
 					duration: 2000,
 					//gap in pixels between the tickers
@@ -39,6 +40,18 @@
 					delayBeforeStart: 0,
 					//'left' or 'right'
 					direction: 'up',
+					//true or false - should the marquee be duplicated to show an effect of continues flow
+					duplicated: true
+				});
+				$('#marquee2').marquee({
+					//speed in milliseconds of the marquee
+					duration: 5000,
+					//gap in pixels between the tickers
+					gap: 50,
+					//time in milliseconds before the marquee will start animating
+					delayBeforeStart: 0,
+					//'left' or 'right'
+					direction: 'left',
 					//true or false - should the marquee be duplicated to show an effect of continues flow
 					duplicated: true
 				});
@@ -51,6 +64,7 @@
 				<div class="panel panel-success">
   				<div class="panel-heading">
 							<h2> 志工基礎教育訓練</h2>
+							<br />
 							<p class="registerPostFix">
 								※ 年滿18歲(以上)且對花博導覽志工有興趣之人士皆可以報名。<br />
 								※ 培訓場次若遇人數不足或過多，主辦單位得視情況取消或增加場次。不便之處敬請見諒。<br />&nbsp;
@@ -64,6 +78,7 @@
 				<div class="panel panel-danger">
   				<div class="panel-heading">
 						<h2>志工特殊教育訓練</h2>
+						<br />
 						<p class="registerPostFix">
 							※ 年滿18歲(以上)且對花博導覽志工有興趣之人士，且已上完基礎教育訓練者，皆可以報名。<br />
 							※ 培訓場次若遇人數不足或過多，主辦單位得視情況取消或增加場次。不便之處敬請見諒。<br />&nbsp;

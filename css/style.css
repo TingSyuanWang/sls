@@ -40,8 +40,8 @@
 .panel-heading {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 70px;
-  padding-right: 70px;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .marquee {
