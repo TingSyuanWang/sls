@@ -11,6 +11,7 @@
 3. jquery
 4. twzipcode
 5. moment
+6. jquery.marquee
 
 ### 穩定版 0.0.4
 新增excel下載功能
