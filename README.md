@@ -11,3 +11,6 @@
 3. jquery
 4. twzipcode
 5. moment
+
+### 穩定版 0.0.4
+新增excel下載功能

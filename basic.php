@@ -2,7 +2,7 @@
   include("db_setting.php");
   if (!@mysql_select_db("2018exporegister")) die("fail to connect to server!");
 
-  // $sql="SELECT `id` FROM  `testbasic` WHERE `event`='105.12.10(六)-11(日) 亞洲大學'";
+  // $sql="SELECT `id` FROM  `testbasic` WHERE `event`='第五場次 105.12.10(六)-11(日) 亞洲大學'";
   // $result=mysql_query($sql) or die("查詢失敗");
   // echo mysql_num_rows($result);
 ?>
@@ -40,7 +40,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="name" class="formTitle">姓名</label>
-              <input type="text" class="form-control input-lg" id="name" name="name" placeholder="姓名">
+              <input type="text" class="form-control input-lg" id="name" name="name" placeholder="姓名" required>
             </div>
             <!-- form-group -->
           </div>
@@ -48,7 +48,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="phone" class="formTitle">電話</label>
-              <input type="text" class="form-control input-lg" id="phone" name="phone" placeholder="電話">
+              <input type="text" class="form-control input-lg" id="phone" name="phone" placeholder="電話" required>
             </div>
             <!-- form-group -->
           </div>
@@ -56,7 +56,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="telephone" class="formTitle">手機</label>
-              <input type="text" class="form-control input-lg" id="telephone" name="telephone" placeholder="手機">
+              <input type="text" class="form-control input-lg" id="telephone" name="telephone" placeholder="手機" required>
             </div>
             <!-- form-group -->
           </div>
@@ -64,7 +64,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="identification" class="formTitle">身份證字號</label>
-              <input type="text" class="form-control input-lg" id="identification" name="identification" placeholder="身份證字號">
+              <input type="text" class="form-control input-lg" id="identification" name="identification" placeholder="身份證字號" required>
             </div>
             <!-- form-group -->
           </div>
@@ -73,7 +73,7 @@
               <div class="form-group">
                   <label for="birthday" class="formTitle">生日(參與本活動需滿18歲)</label>
                   <div class='input-group date' id='birthday'>
-                      <input type='text' class="form-control input-lg" name="birthday"/>
+                      <input type='text' class="form-control input-lg" name="birthday" required/>
                       <span class="input-group-addon">
                           <span class="glyphicon glyphicon-calendar">
                           </span>
@@ -85,7 +85,6 @@
               $(function () {
                   $('#birthday').datetimepicker({
                       format: 'YYYY-MM-DD',
-                      // maxDate: moment().subtract(18, 'years'),
                       maxDate: '1999-01-01',
                       viewMode: 'years',
                       locale:'zh-tw'
@@ -95,7 +94,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="email" class="formTitle">E-mail</label>
-              <input type="email" class="form-control input-lg" id="email" name="email" placeholder="E-mail">
+              <input type="email" class="form-control input-lg" id="email" name="email" placeholder="E-mail" required>
             </div>
             <!-- form-group -->
           </div>
@@ -103,7 +102,7 @@
           <div class="col-md-12">
             <div class="form-group">
               <label for="address" class="formTitle">地址</label>
-              <input type="text" class="form-control input-lg" id="address" name="address" placeholder="地址">
+              <input type="text" class="form-control input-lg" id="address" name="address" placeholder="地址" required>
             </div>
             <!-- form-group -->
           </div>
@@ -122,7 +121,7 @@
                   <!-- insert this line -->
                   <span class="input-group-addon" style="width:0px; padding-left:0px; padding-right:0px; border:none;"></span>
               </div>
-              <input type="text" class="form-control input-lg radioMarginFix" id="unit" name="unit" placeholder="">
+              <input type="text" class="form-control input-lg radioMarginFix" id="unit" name="unit" placeholder="" required>
               <script>
               $('#selectschool').change(function selectschool(){
                 var selectschool = $("#selectschool option:selected").text();
@@ -154,7 +153,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="position" class="formTitle"><p00></p00></label>
-              <input type="text" class="form-control input-lg inputMarginFix" id="position" name="position" placeholder="">
+              <input type="text" class="form-control input-lg inputMarginFix" id="position" name="position" placeholder="" required>
             </div>
             <!-- form-group -->
           </div>
@@ -174,7 +173,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="food" class="formTitle">飲食習慣</label>
-              <select name="food" class="form-control input-lg">
+              <select name="food" class="form-control input-lg" required>
                 <option>葷食</option>
                 <option>素食</option>
               </select>
@@ -184,15 +183,15 @@
           <!-- col -->
           <div class="col-md-6">
             <div class="form-group">
-              <label for="event" class="formTitle">報名場次&nbsp;<a href="http://website/2018expo/%E5%9F%B9%E8%A8%93%E5%A0%B4%E6%AC%A1/" target="_blank">(了解培訓場次資訊)</a></label>
-              <select id="selectevent" name="event" class="form-control input-lg">
+              <label for="event" class="formTitle">報名場次&nbsp;<a href="http://website/2018expo/%E5%9F%B9%E8%A8%93%E5%A0%B4%E6%AC%A1/" target="_blank">(了解培訓資訊場次及時間)</a></label>
+              <select id="selectevent" name="event" class="form-control input-lg" required>
                 <option>
                   請選擇
                 </option>
                 <option id="event01">
-                  105.11.05(六)-06(日) 中國醫藥大學
+                  第一場次 105.11.05(六)-06(日) 中國醫藥大學
                   <?php
-                    $sql01="SELECT `id` FROM  `testbasic` WHERE `event`='105.11.05(六)-06(日) 中國醫藥大學'";
+                    $sql01="SELECT `id` FROM  `testbasic` WHERE `event`='第一場次 105.11.05(六)-06(日) 中國醫藥大學'";
                     $option1 = 120;
                     $result01 = mysql_query($sql01);
                     $result1 = mysql_num_rows($result01);
@@ -201,9 +200,9 @@
                   ?>
                 </option>
                 <option id="event02">
-                  105.11.05(六)-06(日) 亞洲大學
+                  第二場次 105.11.05(六)-06(日) 亞洲大學
                   <?php
-                    $sql02="SELECT `id` FROM  `testbasic` WHERE `event`='105.11.05(六)-06(日) 亞洲大學'";
+                    $sql02="SELECT `id` FROM  `testbasic` WHERE `event`='第二場次 105.11.05(六)-06(日) 亞洲大學'";
                     $option2 = 120;
                     $result02 = mysql_query($sql02);
                     $result2 = mysql_num_rows($result02);
@@ -212,9 +211,9 @@
                   ?>
                 </option>
                 <option id="event03">
-                  105.12.03(六)-04(日) 靜宜大學
+                  第三場次 105.12.03(六)-04(日) 靜宜大學
                   <?php
-                    $sql03="SELECT `id` FROM  `testbasic` WHERE `event`='105.12.03(六)-04(日) 靜宜大學'";
+                    $sql03="SELECT `id` FROM  `testbasic` WHERE `event`='第三場次 105.12.03(六)-04(日) 靜宜大學'";
                     $option3 = 100;
                     $result03 = mysql_query($sql03);
                     $result3 = mysql_num_rows($result03);
@@ -223,9 +222,9 @@
                   ?>
                 </option>
                 <option id="event04">
-                  105.12.03(六)-04(日) 科博館
+                  第四場次 105.12.03(六)-04(日) 科博館
                   <?php
-                    $sql04="SELECT `id` FROM  `testbasic` WHERE `event`='105.12.03(六)-04(日) 科博館'";
+                    $sql04="SELECT `id` FROM  `testbasic` WHERE `event`='第四場次 105.12.03(六)-04(日) 科博館'";
                     $option4 = 130;
                     $result04 = mysql_query($sql04);
                     $result4 = mysql_num_rows($result04);
@@ -234,9 +233,9 @@
                   ?>
                 </option>
                 <option id="event05">
-                  105.12.10(六)-11(日) 亞洲大學
+                  第五場次 105.12.10(六)-11(日) 亞洲大學
                   <?php
-                    $sql05="SELECT `id` FROM  `testbasic` WHERE `event`='105.12.10(六)-11(日) 亞洲大學'";
+                    $sql05="SELECT `id` FROM  `testbasic` WHERE `event`='第五場次 105.12.10(六)-11(日) 亞洲大學'";
                     $option5 = 150;
                     $result05 = mysql_query($sql05);
                     $result5 = mysql_num_rows($result05);
@@ -245,9 +244,9 @@
                   ?>
                 </option>
                 <option id="event06">
-                  105.12.10(六)-11(日) 豐原高中
+                  第六場次 105.12.10(六)-11(日) 豐原高中
                   <?php
-                    $sql06="SELECT `id` FROM  `testbasic` WHERE `event`='105.12.10(六)-11(日) 豐原高中'";
+                    $sql06="SELECT `id` FROM  `testbasic` WHERE `event`='第六場次 105.12.10(六)-11(日) 豐原高中'";
                     $option6 = 130;
                     $result06 = mysql_query($sql06);
                     $result6 = mysql_num_rows($result06);
@@ -273,7 +272,7 @@
                   var endEventTime4 = '2016/12/02 14:00:00';
                   var endEventTime5 = '2016/12/09 14:00:00';
                   var endEventTime6 = '2016/12/09 14:00:00';
-                  if (selectevent == "105.11.05(六)-06(日) 中國醫藥大學") {
+                  if (selectevent == "第一場次 105.11.05(六)-06(日) 中國醫藥大學") {
                     var alert01 = new Array();
                     alert01 = "<?php echo $alert01;?>";
                     var alert01content = "剩餘報名人數：" + "<?php echo $alert01;?>";
@@ -284,7 +283,7 @@
                     } else {
                       $( "p02" ).html(endEvent);
                     }
-                  } else if (selectevent == "105.11.05(六)-06(日) 亞洲大學") {
+                  } else if (selectevent == "第二場次 105.11.05(六)-06(日) 亞洲大學") {
                     var alert02 = new Array();
                     alert02 = "<?php echo $alert02;?>";
                     var alert02content = "剩餘報名人數：" + "<?php echo $alert02;?>";
@@ -295,7 +294,7 @@
                     } else {
                       $( "p02" ).html(endEvent);
                     }
-                  } else if (selectevent == "105.12.03(六)-04(日) 靜宜大學") {
+                  } else if (selectevent == "第三場次 105.12.03(六)-04(日) 靜宜大學") {
                     var alert03 = new Array();
                     alert03 = "<?php echo $alert03;?>";
                     var alert03content = "剩餘報名人數：" + "<?php echo $alert03;?>";
@@ -306,7 +305,7 @@
                     } else {
                       $( "p02" ).html(endEvent);
                     }
-                  } else if (selectevent == "105.12.03(六)-04(日) 靜宜大學") {
+                  } else if (selectevent == "第四場次 105.12.03(六)-04(日) 科博館") {
                     var alert04 = new Array();
                     alert04 = "<?php echo $alert04;?>";
                     var alert04content = "剩餘報名人數：" + "<?php echo $alert04;?>";
@@ -317,7 +316,7 @@
                     } else {
                       $( "p02" ).html(endEvent);
                     }
-                  } else if (selectevent == "105.12.10(六)-11(日) 亞洲大學") {
+                  } else if (selectevent == "第五場次 105.12.10(六)-11(日) 亞洲大學") {
                     var alert05 = new Array();
                     alert05 = "<?php echo $alert05;?>";
                     var alert05content = "剩餘報名人數：" + "<?php echo $alert05;?>";
@@ -328,7 +327,7 @@
                     } else {
                       $( "p02" ).html(endEvent);
                     }
-                  } else if (selectevent == "105.12.10(六)-11(日) 豐原高中") {
+                  } else if (selectevent == "第六場次 105.12.10(六)-11(日) 豐原高中") {
                     var alert06 = new Array();
                     alert06 = "<?php echo $alert06;?>";
                     var alert06content = "剩餘報名人數：" + "<?php echo $alert06;?>";
@@ -362,7 +361,7 @@
                 var endEventTime4 = '2016/12/02 14:00:00';
                 var endEventTime5 = '2016/12/09 14:00:00';
                 var endEventTime6 = '2016/12/09 14:00:00';
-                if (selectevent == "105.11.05(六)-06(日) 中國醫藥大學") {
+                if (selectevent == "第一場次 105.11.05(六)-06(日) 中國醫藥大學") {
                   var alert01 = new Array();
                   alert01 = "<?php echo $alert01;?>";
                   if (Date.parse(localTime).valueOf() > Date.parse(endEventTime1).valueOf()) {
@@ -372,7 +371,7 @@
                     alert("該場次人數已滿，請報名其他場次");
                     return false;
                   }
-                } else if (selectevent == "105.11.05(六)-06(日) 亞洲大學") {
+                } else if (selectevent == "第二場次 105.11.05(六)-06(日) 亞洲大學") {
                   var alert02 = new Array();
                   alert02 = "<?php echo $alert02;?>";
                   if (Date.parse(localTime).valueOf() > Date.parse(endEventTime2).valueOf()) {
@@ -382,7 +381,7 @@
                     alert("該場次人數已滿，請報名其他場次");
                     return false;
                   }
-                } else if (selectevent == "105.12.03(六)-04(日) 靜宜大學") {
+                } else if (selectevent == "第三場次 105.12.03(六)-04(日) 靜宜大學") {
                   var alert03 = new Array();
                   alert03 = "<?php echo $alert03;?>";
                   if (Date.parse(localTime).valueOf() > Date.parse(endEventTime3).valueOf()) {
@@ -392,7 +391,7 @@
                     alert("該場次人數已滿，請報名其他場次");
                     return false;
                   }
-                } else if (selectevent == "105.12.03(六)-04(日) 靜宜大學") {
+                } else if (selectevent == "第三場次 105.12.03(六)-04(日) 靜宜大學") {
                   var alert04 = new Array();
                   alert04 = "<?php echo $alert04;?>";
                   if (Date.parse(localTime).valueOf() > Date.parse(endEventTime4).valueOf()) {
@@ -402,7 +401,7 @@
                     alert("該場次人數已滿，請報名其他場次");
                     return false;
                   }
-                } else if (selectevent == "105.12.10(六)-11(日) 亞洲大學") {
+                } else if (selectevent == "第五場次 105.12.10(六)-11(日) 亞洲大學") {
                   var alert05 = new Array();
                   alert05 = "<?php echo $alert05;?>";
                   if (Date.parse(localTime).valueOf() > Date.parse(endEventTime5).valueOf()) {
@@ -412,7 +411,7 @@
                     alert("該場次人數已滿，請報名其他場次");
                     return false;
                   }
-                } else if (selectevent == "105.12.10(六)-11(日) 豐原高中") {
+                } else if (selectevent == "第六場次 105.12.10(六)-11(日) 豐原高中") {
                   var alert06 = new Array();
                   alert06 = "<?php echo $alert06;?>";
                   if (Date.parse(localTime).valueOf() > Date.parse(endEventTime6).valueOf()) {

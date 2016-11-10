@@ -30,4 +30,4 @@ return xmlHttp.getResponseHeader("Date");
 
 var st = srvTime();
 var date = new Date(st);
-// 結束偵測server的時間 
+// 結束偵測server的時間

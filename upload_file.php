@@ -14,18 +14,6 @@
 		$sql_query .=  "'".$_POST["food"]."',";
 		$sql_query .=  "'".$_POST["event"]."')";
 		$result = mysql_query($sql_query);
-		// $result = mysql_query("INSERT INTO testbasic (name) VALUES ('$_POST[name]')");
-		// if($result)
-		// {
-		// echo "Success";
-		//
-		// }
-		// else
-		// {
-		// echo "Error";
-		//
-		// }
-
 		// 寄信
 		$sendEmail = $_POST["email"];
 		$to = "$sendEmail"; //收件者
@@ -36,7 +24,7 @@
 		$message .= '<p style="font-size:20px; font-family:Microsoft JhengHei;">感謝您報名「2018臺中世界花卉博覽會」導覽志工「<span style="color: red;">基礎教育訓練</span>」。<br/>';
 		$message .= '你報名的場次為：<span style="color: red;"><strong>'.strip_tags($_POST['event']).'</strong></span><br/>';
 		$message .= '詳細的上課地點及課程內容請參照報名系統之培訓場次，網址：<br/>';
-		$message .= '<a href="http://sls.asia.edu.tw/2018exporegister/index.html">http://sls.asia.edu.tw/2018exporegister/index.html</a></p>';
+		$message .= '<a href="http://website/2018exporegister/index.html">http://website/2018exporegister/index.html</a></p>';
 		$message .= '<br/>';
 		$message .= '<p style="font-size:20px; font-family:Microsoft JhengHei;">「2018臺中世界花卉博覽會」導覽志工培訓，期待與您相會。<br/>';
 		$message .= '若有任何問題，歡迎來信或來電，我們將竭盡為您服務！</p><br/>';
@@ -44,7 +32,7 @@
 		$message .= '<p style="font-size:16px; font-family:Microsoft JhengHei;">服務專線：(04)23323456轉3295<br/>';
 		$message .= '服務時間：週一至週五08:10-17:00<br/>';
 		$message .= '服務信箱：<a href="mailto:yifong@asia.edu.tw">yifong@asia.edu.tw</a></p>';
-		$message .= '<img src="http://sls.asia.edu.tw/2018exporegister/images/logo.png" alt="2018臺中世界花卉博覽會" />';
+		$message .= '<img src="http://website/2018exporegister/images/logo.png" alt="2018臺中世界花卉博覽會" />';
 		$message .= '</body></html>';
 
 		// To send HTML mail, the Content-type header must be set

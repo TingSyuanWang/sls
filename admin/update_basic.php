@@ -96,12 +96,12 @@
             <tr>
             	<td>報名場次</td>
                 <td>
-                <input type="radio" name="event" id="event" value="105.11.05(六)-06(日) 中國醫藥大學" <?php if($row_result["event"]=="105.11.05(六)-06(日) 中國醫藥大學") echo "checked";?> />105.11.05(六)-06(日) 中國醫藥大學<br />
-                <input type="radio" name="event" id="event" value="105.11.05(六)-06(日) 亞洲大學" <?php if($row_result["event"]=="105.11.05(六)-06(日) 亞洲大學") echo "checked";?> />105.11.05(六)-06(日) 亞洲大學<br />
-                <input type="radio" name="event" id="event" value="105.12.03(六)-04(日) 靜宜大學" <?php if($row_result["event"]=="105.12.03(六)-04(日) 靜宜大學") echo "checked";?> />105.12.03(六)-04(日) 靜宜大學<br />
-                <input type="radio" name="event" id="event" value="105.12.03(六)-04(日) 科博館" <?php if($row_result["event"]=="105.12.03(六)-04(日) 科博館") echo "checked";?> />105.12.03(六)-04(日) 科博館<br />
-                <input type="radio" name="event" id="event" value="105.12.10(六)-11(日) 亞洲大學" <?php if($row_result["event"]=="105.12.10(六)-11(日) 亞洲大學") echo "checked";?> />105.12.10(六)-11(日) 亞洲大學<br />
-                <input type="radio" name="event" id="event" value="105.12.10(六)-11(日) 豐原高中" <?php if($row_result["event"]=="105.12.10(六)-11(日) 豐原高中") echo "checked";?> />105.12.10(六)-11(日) 豐原高中<br />
+                <input type="radio" name="event" id="event" value="第一場次 105.11.05(六)-06(日) 中國醫藥大學" <?php if($row_result["event"]=="第一場次 105.11.05(六)-06(日) 中國醫藥大學") echo "checked";?> />第一場次 105.11.05(六)-06(日) 中國醫藥大學<br />
+                <input type="radio" name="event" id="event" value="第二場次 105.11.05(六)-06(日) 亞洲大學" <?php if($row_result["event"]=="第二場次 105.11.05(六)-06(日) 亞洲大學") echo "checked";?> />第二場次 105.11.05(六)-06(日) 亞洲大學<br />
+                <input type="radio" name="event" id="event" value="第三場次 105.12.03(六)-04(日) 靜宜大學" <?php if($row_result["event"]=="第三場次 105.12.03(六)-04(日) 靜宜大學") echo "checked";?> />第三場次 105.12.03(六)-04(日) 靜宜大學<br />
+                <input type="radio" name="event" id="event" value="第四場次 105.12.03(六)-04(日) 科博館" <?php if($row_result["event"]=="第四場次 105.12.03(六)-04(日) 科博館") echo "checked";?> />第四場次 105.12.03(六)-04(日) 科博館<br />
+                <input type="radio" name="event" id="event" value="第五場次 105.12.10(六)-11(日) 亞洲大學" <?php if($row_result["event"]=="第五場次 105.12.10(六)-11(日) 亞洲大學") echo "checked";?> />第五場次 105.12.10(六)-11(日) 亞洲大學<br />
+                <input type="radio" name="event" id="event" value="第六場次 105.12.10(六)-11(日) 豐原高中" <?php if($row_result["event"]=="第六場次 105.12.10(六)-11(日) 豐原高中") echo "checked";?> />第六場次 105.12.10(六)-11(日) 豐原高中<br />
                 </td>
         	</tr>
             <tr>
