@@ -30,3 +30,16 @@
 .deleteLine {
   text-decoration:line-through;
 }
+
+.registerPostFix {
+  margin-left: 10px;
+  font-size: 21px;
+  font-weight: 200;
+}
+
+.panel-heading {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 70px;
+  padding-right: 70px;
+}
