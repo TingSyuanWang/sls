@@ -11,8 +11,9 @@
 	<!-- custom css/js -->
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<script src="js/style.js"></script>
-	<!-- jquery -->
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<!-- marquee script -->
+	<script type="text/javascript" src="bower_components/jquery.marquee/jquery.marquee.min.js"></script>
+	<script type="text/javascript" src="bower_components/jquery.marquee/jquery.pause.js"></script>
 	<!-- responsive setting -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -21,6 +22,29 @@
 	<div class="container">
 		<img src="images/logo_2018expo.png" class="img-responsive center-block" alt="2018花博志工導覽報名系統" height="100">
 		<h1 class="text-center">導覽志工報名系統</h1>
+		<br />
+		<div class="row">
+			<div class="col-md-12">
+				<div class="marquee" id="marquee1"><b>【公告】</b>11/13科博館場次，因人數不足，故取消該場次培訓。不便之處，敬請見諒。</div>
+				<script>
+				setInterval(function(){
+				    $('#marquee1').marquee('toggle');
+				},2000);
+				$('.marquee').marquee({
+					//speed in milliseconds of the marquee
+					duration: 2000,
+					//gap in pixels between the tickers
+					gap: 0,
+					//time in milliseconds before the marquee will start animating
+					delayBeforeStart: 0,
+					//'left' or 'right'
+					direction: 'up',
+					//true or false - should the marquee be duplicated to show an effect of continues flow
+					duplicated: true
+				});
+				</script>
+			</div>
+		</div>
 		<br />
 		<div class="row">
 			<div class="col-md-12">
