@@ -8,6 +8,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>志工特殊教育訓練 | 2018臺中世界花卉博覽會導覽報名系統</title>
+    <link rel="shortcut icon" type="image/png" href="images/favicon-16x16.png"/>
     <!-- bootstrap -->
     <script type="text/javascript" src="bower_components/jquery/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
