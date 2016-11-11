@@ -484,7 +484,53 @@
         <div class="row">
           <div class="col-md-12">
             <div class="form-group">
-              <label for="attachment" class="formTitle">附件上傳(檔名請使用：日期+姓名[例:20161001王大明])<br />若檔案較大，請耐心等待頁面跳轉，勿重複送出。<br />目前手機版暫無法傳送檔案，請先使用電腦報名。</label>
+              <label for="basicYet" class="formTitle">是否參加過基礎場次</label>
+              <select id="basicYet" name="basicYet" class="form-control input-lg">
+                <option>請選擇</option>
+                <option>參加過，請選擇參加過的基礎場次</option>
+                <option>未參加過，請上傳基礎結業證書</option>
+              </select>
+              <script>
+                $('#basicYet').change(function basicYet() {
+                  var basicYet = $("#basicYet option:selected").val();
+                  if (basicYet == "參加過，請選擇參加過的基礎場次") {
+                    $("#attachmentBlock").hide();
+                    $("#chooseBasicEvent").show();
+                  } else if (basicYet == "未參加過，請上傳基礎結業證書") {
+                    $("#chooseBasicEvent").hide();
+                    $("#attachmentBlock").show();
+                  } else {
+                    $("#chooseBasicEvent").hide();
+                    $("#attachmentBlock").hide();
+                  }
+                });
+              </script>
+            </div>
+          </div>
+        </div>
+        <!-- row -->
+        <div class="row">
+          <div id="chooseBasicEvent" class="col-md-12" style="display:none">
+            <div class="form-group">
+              <label for="BasicEvent" class="formTitle">請選擇基礎報名場次</label>
+              <select id="BasicEvent" name="BasicEvent" class="form-control input-lg">
+                <option value="">請選擇</option>
+                <option>基礎訓練第一場次105.11.05(六)-06(日) 中國醫藥大學</option>
+                <option>基礎訓練第二場次105.11.05(六)-06(日) 亞洲大學</option>
+                <option>基礎訓練第三場次105.12.03(六)-04(日) 科博館</option>
+                <option>基礎訓練第四場次105.12.03(六)-04(日) 靜宜大學</option>
+                <option>基礎訓練第五場次105.12.10(六)-11(日) 豐原高中</option>
+                <option>基礎訓練第六場次105.12.10(六)-11(日) 亞洲大學</option>
+              </select>
+            </div>
+          </div>
+          <div id="attachmentBlock" class="col-md-12" style="display:none">
+            <div class="form-group">
+              <label for="attachment" class="formTitle">附件上傳<br />
+              ※檔名請使用：上傳日期+姓名[例:20161001王大明])<br />
+              ※格式請為PDF、jpg、jpeg 、gif 、png(限制10MB)<br />
+              ※上傳檔案請使用電腦<br />
+              ※若檔案較大，請耐心等待頁面跳轉，勿重複送出。</label>
               <input type="file" id="attachment" name="attachment" class="formTitle" accept=".pdf,.jpg,.jpeg,.png,.gif">
               <script>
               $("#attachment").change(function() {
@@ -529,11 +575,6 @@
               var endEventTime10 = '2016/12/16 14:00:00';
               var endEventTime11 = '2016/12/23 14:00:00';
               var endEventTime12 = '2016/12/23 14:00:00';
-              var fsize = $('#attachment')[0].files[0].size;
-              if (fsize > 10000000) {
-                alert("超過檔案限制上傳限制，請重新選擇檔案！");
-                return false;
-              }
               if (selectevent == "第一場次 105.10.30(日) 亞洲大學") {
                 var alert01 = new Array();
                 alert01 = "<?php echo $alert01;?>";
@@ -654,6 +695,11 @@
                   alert("該場次人數已滿，請報名其他場次");
                   return false;
                 }
+              }
+              var fsize = $('#attachment')[0].files[0].size;
+              if (fsize > 10000000) {
+                alert("超過檔案限制上傳限制，請重新選擇檔案！");
+                return false;
               }
             });
           </script>

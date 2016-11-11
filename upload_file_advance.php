@@ -28,7 +28,7 @@
 		$headers .= "From: 亞大花博伺服器-勿直接回信 <openstackicehousegeek@gmail.com>"; //寄件者
 		mail("$to", "$subject", "$message", "$headers");
 
-		$sql_query = "INSERT INTO testadvance (`name`, `phone`, `telephone`, `identification`, `birthday`, `email`, `address`, `unit`, `position`, `food`, `event`, `attachment`) VALUES (";
+		$sql_query = "INSERT INTO testadvance (`name`, `phone`, `telephone`, `identification`, `birthday`, `email`, `address`, `unit`, `position`, `food`, `event`, `BasicEvent`, `attachment`) VALUES (";
 		$sql_query .=  "'".$_POST["name"]."',";
 		$sql_query .=  "'".$_POST["phone"]."',";
 		$sql_query .=  "'".$_POST["telephone"]."',";
@@ -40,6 +40,7 @@
 		$sql_query .=  "'".$_POST["position"]."',";
 		$sql_query .=  "'".$_POST["food"]."',";
 		$sql_query .=  "'".$_POST["event"]."',";
+		$sql_query .=  "'".$_POST["BasicEvent"]."',";
     $sql_query .=  "'".$_FILES['attachment']['name']."')";
 		$result = mysql_query($sql_query);
     $uploadLabFile ="";
