@@ -78,6 +78,7 @@ echo "
               <th>系所/職稱</th>
               <th>飲食習慣</th>
               <th>報名場次</th>
+              <th>上傳基礎結業證書或志願服務紀錄冊</th>
               <th>已參加基礎場次</th>
               <th>附件上傳</th>
               <th>功能</th>
@@ -97,6 +98,7 @@ while($row_result=mysql_fetch_assoc($result)) {
   echo "<td>".$row_result["position"]."</td>";
   echo "<td>".$row_result["food"]."</td>";
   echo "<td>".$row_result["event"]."</td>";
+  echo "<td>".$row_result["basicYet"]."</td>";
   echo "<td>".$row_result["BasicEvent"]."</td>";
   echo "<td>"."<a target=\"_blank\" href=\"../uploads/".$row_result["attachment"]."\">".$row_result["attachment"]."</a>"."</td>";
   echo "<td><a href='update_advance.php?id=".$row_result["id"]."'> 修改</a>";

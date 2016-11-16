@@ -1,3 +1,15 @@
+<!--
+   #                 .-~~~~~~~~~-._       _.-~~~~~~~~~-.
+   #             __.'              ~.   .~              `.__
+   #           .'//                  \./                  \\`.
+   #         .'//                     |                     \\`.
+   #       .'// .-~"""""""~~~~-._     |     _,-~~~~"""""""~-. \\`.
+   #     .'//.-"                 `-.  |  .-'                 "-.\\`.
+   #   .'//______.============-..   \ | /   ..-============.______\\`.
+   # .'______________________________\|/______________________________`.
+   #
+                            書本保佑  永無BUG
+-->
 <?php
   include("db_setting.php");
   if (!@mysql_select_db("2018exporegister")) die("fail to connect to server!");
@@ -37,7 +49,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="name" class="formTitle">姓名</label>
-              <input type="text" class="form-control input-lg" id="name" name="name" placeholder="姓名">
+              <input type="text" class="form-control input-lg" id="name" name="name" placeholder="姓名" required>
             </div>
             <!-- form-group -->
           </div>
@@ -45,7 +57,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="phone" class="formTitle">電話</label>
-              <input type="text" class="form-control input-lg" id="phone" name="phone" placeholder="電話">
+              <input type="text" class="form-control input-lg" id="phone" name="phone" placeholder="電話" required>
             </div>
             <!-- form-group -->
           </div>
@@ -53,7 +65,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="telephone" class="formTitle">手機</label>
-              <input type="text" class="form-control input-lg" id="telephone" name="telephone" placeholder="手機">
+              <input type="text" class="form-control input-lg" id="telephone" name="telephone" placeholder="手機" required>
             </div>
             <!-- form-group -->
           </div>
@@ -61,7 +73,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="identification" class="formTitle">身份證字號</label>
-              <input type="text" class="form-control input-lg" id="identification" name="identification" placeholder="身份證字號">
+              <input type="text" class="form-control input-lg" id="identification" name="identification" placeholder="身份證字號" required>
             </div>
             <!-- form-group -->
           </div>
@@ -70,7 +82,7 @@
               <div class="form-group">
                   <label for="birthday" class="formTitle">生日(參與本活動需滿18歲)</label>
                   <div class='input-group date' id='birthday'>
-                      <input type='text' class="form-control input-lg" name="birthday"/>
+                      <input type='text' class="form-control input-lg" name="birthday" required/>
                       <span class="input-group-addon">
                           <span class="glyphicon glyphicon-calendar">
                           </span>
@@ -91,7 +103,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="email" class="formTitle">E-mail</label>
-              <input type="email" class="form-control input-lg" id="email" name="email" placeholder="E-mail">
+              <input type="email" class="form-control input-lg" id="email" name="email" placeholder="E-mail" required>
             </div>
             <!-- form-group -->
           </div>
@@ -99,7 +111,7 @@
           <div class="col-md-12">
             <div class="form-group">
               <label for="address" class="formTitle">地址</label>
-              <input type="text" class="form-control input-lg" id="address" name="address" placeholder="地址">
+              <input type="text" class="form-control input-lg" id="address" name="address" placeholder="地址" required>
             </div>
             <!-- form-group -->
           </div>
@@ -118,14 +130,17 @@
                   <!-- insert this line -->
                   <span class="input-group-addon" style="width:0px; padding-left:0px; padding-right:0px; border:none;"></span>
               </div>
-              <input type="text" class="form-control input-lg radioMarginFix" id="unit" name="unit" placeholder="">
+              <input type="text" class="form-control input-lg radioMarginFix" id="unit" name="unit" placeholder="" required>
               <script>
               $('#selectschool').change(function selectschool(){
                 var selectschool = $("#selectschool option:selected").text();
-                if (selectschool == "亞洲大學")
+                if (selectschool == "亞洲大學") {
                   $("#unit").attr("placeholder", "學號");
-                else if (selectschool == "其它學校")
+                } else if (selectschool == "其它學校") {
                   $("#unit").attr("placeholder", "學校名稱");
+                } else {
+                  $("#unit").attr("placeholder", "請選學校");
+                }
               });
               $('#inlineRadio1').click(function() {
                  $('#selectschool').removeAttr("disabled");
@@ -150,7 +165,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="position" class="formTitle"><p00></p00></label>
-              <input type="text" class="form-control input-lg inputMarginFix" id="position" name="position" placeholder="">
+              <input type="text" class="form-control input-lg inputMarginFix" id="position" name="position" placeholder="" required>
             </div>
             <!-- form-group -->
           </div>
@@ -170,7 +185,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="food" class="formTitle">飲食習慣</label>
-              <select name="food" class="form-control input-lg">
+              <select name="food" class="form-control input-lg required">
                 <option>葷食</option>
                 <option>素食</option>
               </select>
@@ -181,7 +196,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="event" class="formTitle">報名場次&nbsp;<a href="http://website/2018expo/%E5%9F%B9%E8%A8%93%E5%A0%B4%E6%AC%A1/" target="_blank">(了解培訓資訊場次及時間)</a></label>
-              <select id="selectevent" name="event" class="form-control input-lg">
+              <select id="selectevent" name="event" class="form-control input-lg required">
                 <option>
                   請選擇
                 </option>
@@ -485,19 +500,23 @@
         <div class="row">
           <div class="col-md-12">
             <div class="form-group">
-              <label for="basicYet" class="formTitle">是否參加過基礎場次</label>
+              <label for="basicYet" class="formTitle">上傳基礎結業證書或志願服務紀錄冊</label>
               <select id="basicYet" name="basicYet" class="form-control input-lg">
                 <option>請選擇</option>
-                <option>參加過，請選擇參加過的基礎場次</option>
-                <option>未參加過，請上傳基礎結業證書</option>
+                <option>已參加2018花博導覽志工舉辦之基礎教育訓練</option>
+                <option>已有基礎結業證書</option>
+                <option>已有取得志願服務紀錄冊</option>
               </select>
               <script>
                 $('#basicYet').change(function basicYet() {
                   var basicYet = $("#basicYet option:selected").val();
-                  if (basicYet == "參加過，請選擇參加過的基礎場次") {
+                  if (basicYet == "已參加2018花博導覽志工舉辦之基礎教育訓練") {
                     $("#attachmentBlock").hide();
                     $("#chooseBasicEvent").show();
-                  } else if (basicYet == "未參加過，請上傳基礎結業證書") {
+                  } else if (basicYet == "已有基礎結業證書") {
+                    $("#chooseBasicEvent").hide();
+                    $("#attachmentBlock").show();
+                  } else if (basicYet == "已有取得志願服務紀錄冊") {
                     $("#chooseBasicEvent").hide();
                     $("#attachmentBlock").show();
                   } else {

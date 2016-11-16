@@ -1,7 +1,7 @@
 <?php
 	include("db_setting.php");
 		if (!@mysql_select_db("2018exporegister")) die("fail to connect to server!");
-		$sql_query = "INSERT INTO testbasic (`name`, `phone`, `telephone`, `identification`, `birthday`, `email`, `address`, `unit`, `position`, `food`, `event`) VALUES (";
+		$sql_query = "INSERT INTO applybasic (`name`, `phone`, `telephone`, `identification`, `birthday`, `email`, `address`, `unit`, `position`, `food`, `event`) VALUES (";
 		$sql_query .=  "'".$_POST["name"]."',";
 		$sql_query .=  "'".$_POST["phone"]."',";
 		$sql_query .=  "'".$_POST["telephone"]."',";

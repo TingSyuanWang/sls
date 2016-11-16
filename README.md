@@ -9,7 +9,7 @@
 
 - 網址用 website 替代
 - applybasic -> testbasic
-- applyadvance -> testadvance
+- testadvance -> testadvance
 
 #### Bower_component套件
 

@@ -11,7 +11,7 @@ require_once('Classes/PHPExcel/Writer/Excel2007.php');
 $seldb = @mysql_select_db("2018exporegister");
 if (!$seldb) die("資料庫無法連結");
 
-$SQL = "SELECT * FROM  `testbasic` WHERE `event`='第五場次 105.12.10(六)-11(日) 亞洲大學' ORDER BY `id`";
+$SQL = "SELECT * FROM  `applybasic` WHERE `event`='第五場次 105.12.10(六)-11(日) 亞洲大學' ORDER BY `id`";
 $result = mysql_query( $SQL ) or die("Couldn't execute query.".mysql_error());
 
 if (file_exists('admin_template.xlsx')) {

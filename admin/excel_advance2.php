@@ -44,7 +44,9 @@ $objPHPExcel->getActiveSheet()->setCellValue('I1', '學校/機關/團體/社團'
 $objPHPExcel->getActiveSheet()->setCellValue('J1', '系所/職稱');
 $objPHPExcel->getActiveSheet()->setCellValue('K1', '飲食習慣');
 $objPHPExcel->getActiveSheet()->setCellValue('L1', '報名場次');
-$objPHPExcel->getActiveSheet()->setCellValue('M1', '附件上傳');
+$objPHPExcel->getActiveSheet()->setCellValue('M1', '上傳基礎結業證書或志願服務紀錄冊');
+$objPHPExcel->getActiveSheet()->setCellValue('N1', '已報名基礎場次');
+$objPHPExcel->getActiveSheet()->setCellValue('O1', '附件上傳');
 
 $i=2;
 while($row = mysql_fetch_array($result,MYSQL_ASSOC)) {
@@ -60,7 +62,9 @@ while($row = mysql_fetch_array($result,MYSQL_ASSOC)) {
   $objPHPExcel->getActiveSheet()->setCellValue('J'.$i, $row['position']);
   $objPHPExcel->getActiveSheet()->setCellValue('K'.$i, $row['food']);
   $objPHPExcel->getActiveSheet()->setCellValue('L'.$i, $row['event']);
-  $objPHPExcel->getActiveSheet()->setCellValue('M'.$i, $row['attachment']);
+  $objPHPExcel->getActiveSheet()->setCellValue('M'.$i, $row['basicYet']);
+  $objPHPExcel->getActiveSheet()->setCellValue('N'.$i, $row['BasicEvent']);
+  $objPHPExcel->getActiveSheet()->setCellValue('O'.$i, $row['attachment']);
   $i++;
 }
 

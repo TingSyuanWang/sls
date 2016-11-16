@@ -99,6 +99,18 @@
 										<?php echo $row_result["event"];?>
 									</td>
 								</tr>
+								<tr>
+									<td>上傳基礎結業證書或志願服務紀錄冊</td>
+									<td>
+										<?php echo $row_result["basicYet"];?>
+									</td>
+								</tr>
+								<tr>
+									<td>已參加基礎場次</td>
+									<td>
+										<?php echo $row_result["BasicEvent"];?>
+									</td>
+								</tr>
                 <tr>
                 	<td>檔案上傳</td>
                     <td><?php echo $row_result["attachment"];?></td>

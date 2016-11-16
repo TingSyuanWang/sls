@@ -13,7 +13,9 @@
 		$sql_query .=  "`unit`='".$_POST["unit"]."',";
 		$sql_query .=  "`position`='".$_POST["position"]."',";
 		$sql_query .=  "`food`='".$_POST["food"]."',";
-		$sql_query .=  "`event`='".$_POST["event"]."' ";
+		$sql_query .=  "`event`='".$_POST["event"]."',";
+		$sql_query .=  "`basicYet`='".$_POST["basicYet"]."',";
+		$sql_query .=  "`BasicEvent`='".$_POST["BasicEvent"]."' ";
 		$sql_query .= "WHERE `id`=".$_POST["id"];
 		$result = mysql_query($sql_query);
 		// redirect
@@ -110,6 +112,25 @@
                 <input type="radio" name="event" id="event" value="第十二場次 105.12.24(六) 科博館" <?php if($row_result["event"]=="第十二場次 105.12.24(六) 科博館") echo "checked";?> />第十二場次 105.12.24(六) 科博館<br />
                 </td>
         	</tr>
+					<tr>
+						<td>上傳基礎結業證書或志願服務紀錄冊</td>
+						<td>
+						<input type="radio" name="basicYet" id="basicYet" value="已參加2018花博導覽志工舉辦之基礎教育訓練" <?php if($row_result["basicYet"]=="已參加2018花博導覽志工舉辦之基礎教育訓練") echo "checked";?> />已參加2018花博導覽志工舉辦之基礎教育訓練<br />
+						<input type="radio" name="basicYet" id="basicYet" value="已有基礎結業證書" <?php if($row_result["basicYet"]=="已有基礎結業證書") echo "checked";?> />已有基礎結業證書<br />
+						<input type="radio" name="basicYet" id="basicYet" value="已有取得志願服務紀錄冊" <?php if($row_result["basicYet"]=="已有取得志願服務紀錄冊") echo "checked";?> />已有取得志願服務紀錄冊
+						</td>
+				</tr>
+				<tr>
+					<td>請選擇基礎報名場次</td>
+					<td>
+					<input type="radio" name="BasicEvent" id="BasicEvent" value="基礎訓練第一場次105.11.05(六)-06(日) 中國醫藥大學" <?php if($row_result["BasicEvent"]=="基礎訓練第一場次105.11.05(六)-06(日) 中國醫藥大學") echo "checked";?> />基礎訓練第一場次105.11.05(六)-06(日) 中國醫藥大學<br />
+					<input type="radio" name="BasicEvent" id="BasicEvent" value="基礎訓練第二場次105.11.05(六)-06(日) 亞洲大學" <?php if($row_result["BasicEvent"]=="基礎訓練第二場次105.11.05(六)-06(日) 亞洲大學") echo "checked";?> />基礎訓練第二場次105.11.05(六)-06(日) 亞洲大學<br />
+					<input type="radio" name="BasicEvent" id="BasicEvent" value="基礎訓練第三場次105.12.03(六)-04(日) 科博館" <?php if($row_result["BasicEvent"]=="基礎訓練第三場次105.12.03(六)-04(日) 科博館") echo "checked";?> />基礎訓練第三場次105.12.03(六)-04(日) 科博館<br />
+					<input type="radio" name="BasicEvent" id="BasicEvent" value="基礎訓練第四場次105.12.03(六)-04(日) 靜宜大學" <?php if($row_result["BasicEvent"]=="基礎訓練第四場次105.12.03(六)-04(日) 靜宜大學") echo "checked";?> />基礎訓練第四場次105.12.03(六)-04(日) 靜宜大學<br />
+					<input type="radio" name="BasicEvent" id="BasicEvent" value="基礎訓練第五場次105.12.10(六)-11(日) 豐原高中" <?php if($row_result["BasicEvent"]=="基礎訓練第五場次105.12.10(六)-11(日) 豐原高中") echo "checked";?> />基礎訓練第五場次105.12.10(六)-11(日) 豐原高中<br />
+					<input type="radio" name="BasicEvent" id="BasicEvent" value="基礎訓練第六場次105.12.10(六)-11(日) 亞洲大學" <?php if($row_result["BasicEvent"]=="基礎訓練第六場次105.12.10(六)-11(日) 亞洲大學") echo "checked";?> />基礎訓練第六場次105.12.10(六)-11(日) 亞洲大學
+					</td>
+			</tr>
             <tr>
             	<td colspan="2" align="center">
                 <input name="id" type="hidden" value="<?php echo $row_result["id"];?>" />

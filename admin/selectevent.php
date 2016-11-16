@@ -15,25 +15,25 @@ if (!$seldb) die("資料庫無法連結");
 $sqlevent = null;
 switch ($q) {
     case 0:
-        $sql = "SELECT * FROM `testbasic` ORDER BY `id`";
+        $sql = "SELECT * FROM `applybasic` ORDER BY `id`";
         break;
     case 1:
-        $sql = "SELECT * FROM  `testbasic` WHERE `event`='第一場次 105.11.05(六)-06(日) 中國醫藥大學' ORDER BY `id`";
+        $sql = "SELECT * FROM  `applybasic` WHERE `event`='第一場次 105.11.05(六)-06(日) 中國醫藥大學' ORDER BY `id`";
         break;
     case 2:
-        $sql = "SELECT * FROM  `testbasic` WHERE `event`='第二場次 105.11.05(六)-06(日) 亞洲大學' ORDER BY `id`";
+        $sql = "SELECT * FROM  `applybasic` WHERE `event`='第二場次 105.11.05(六)-06(日) 亞洲大學' ORDER BY `id`";
         break;
     case 3:
-        $sql = "SELECT * FROM  `testbasic` WHERE `event`='第三場次 105.12.03(六)-04(日) 靜宜大學' ORDER BY `id`";
+        $sql = "SELECT * FROM  `applybasic` WHERE `event`='第三場次 105.12.03(六)-04(日) 靜宜大學' ORDER BY `id`";
         break;
     case 4:
-        $sql = "SELECT * FROM  `testbasic` WHERE `event`='第四場次 105.12.03(六)-04(日) 科博館' ORDER BY `id`";
+        $sql = "SELECT * FROM  `applybasic` WHERE `event`='第四場次 105.12.03(六)-04(日) 科博館' ORDER BY `id`";
         break;
     case 5:
-        $sql = "SELECT * FROM  `testbasic` WHERE `event`='第五場次 105.12.10(六)-11(日) 亞洲大學' ORDER BY `id`";
+        $sql = "SELECT * FROM  `applybasic` WHERE `event`='第五場次 105.12.10(六)-11(日) 亞洲大學' ORDER BY `id`";
         break;
     case 6:
-        $sql = "SELECT * FROM  `testbasic` WHERE `event`='第六場次 105.12.10(六)-11(日) 豐原高中' ORDER BY `id`";
+        $sql = "SELECT * FROM  `applybasic` WHERE `event`='第六場次 105.12.10(六)-11(日) 豐原高中' ORDER BY `id`";
         break;
 }
 $result = mysql_query($sql);
