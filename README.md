@@ -4,6 +4,13 @@
 
 - 網址用TESTFORWEB取代
 
+### 穩定版 0.0.4
+新增excel下載功能
+
+- 網址用 website 替代
+- applybasic -> testbasic
+- applyadvance -> testadvance
+
 #### Bower_component套件
 
 1. Bootstrap
@@ -12,6 +19,3 @@
 4. twzipcode
 5. moment
 6. jquery.marquee
-
-### 穩定版 0.0.4
-新增excel下載功能
