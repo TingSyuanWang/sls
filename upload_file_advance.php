@@ -42,26 +42,24 @@
 		$sql_query .=  "'".$_POST["event"]."',";
 		$sql_query .=  "'".$_POST["basicYet"]."',";
 		$sql_query .=  "'".$_POST["BasicEvent"]."',";
-    $sql_query .=  "'".$_FILES['attachment']['name']."')";
+    $sql_query .=  "'".date("YmdHis")."_".$_FILES['attachment']['name']."')";
 		$result = mysql_query($sql_query);
     $uploadLabFile ="";
   	if ($_FILES['attachment']['name'] != '' && $_FILES['attachment']['error'] == 0)
   	{
-  		$filename = str_replace(" ","",$_FILES['attachment']['name']);
-  		$uploadLabFile= $filename;
+			$filename = str_replace(" ","",date("YmdHis")."_".$_FILES['attachment']['name']);
+  		$uploadLabFile = $filename;
   		$pathFilename = iconv("UTF-8", "big5//TRANSLIT//IGNORE", $uploadLabFile);
   		move_uploaded_file($_FILES["attachment"]["tmp_name"], "./uploads/" .$pathFilename);
   	}
-		// $result = mysql_query("INSERT INTO testbasic (name) VALUES ('$_POST[name]')");
+		// $result = mysql_query("INSERT INTO testadvance (name) VALUES ('$_POST[name]')");
 		// if($result)
 		// {
 		// echo "Success";
-		//
 		// }
 		// else
 		// {
 		// echo "Error";
-		//
 		// }
 ?>
 
