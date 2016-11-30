@@ -37,6 +37,10 @@
     <!-- moment zh-tw -->
     <script src="bower_components/moment/locale/zh-tw.js"></script>
     <script type="text/javascript" src="bower_components/moment/min/moment-with-locales.min.js"></script>
+    <!-- bootstrap select -->
+    <link rel="stylesheet" href="bower_components/bootstrap-select/dist/css/bootstrap-select.css">
+    <script type="text/javascript" src="bower_components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="bower_components/bootstrap-select/dist/js/i18n/defaults-zh_TW.min.js"></script>
 </head>
 
 <body>
@@ -46,39 +50,69 @@
     <div class="container">
       <form action="upload_file_advance.php" method="post" name="formadd" id="formadd" enctype="multipart/form-data" data-toggle="validator" role="form">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-3">
             <div class="form-group">
-              <label for="name" class="formTitle">姓名</label>
-              <input type="text" class="form-control input-lg" id="name" name="name" placeholder="姓名">
+              <label for="surname" class="formTitle">中文姓</label>
+              <input type="text" class="form-control input-lg" id="surname" name="surname" placeholder="林">
+            </div>
+            <!-- form group -->
+          </div>
+          <!-- col -->
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="name" class="formTitle">中文名</label>
+              <input type="text" class="form-control input-lg" id="name" name="name" placeholder="怡君">
             </div>
             <!-- form-group -->
           </div>
           <!-- col -->
-          <div class="col-md-6">
+          <div class="col-md-3">
             <div class="form-group">
-              <label for="phone" class="formTitle">電話</label>
-              <input type="text" class="form-control input-lg" id="phone" name="phone" placeholder="電話">
+              <label for="ensurname" class="formTitle">英文姓</label>
+              <input type="text" class="form-control input-lg" id="ensurname" name="ensurname" placeholder="LIN">
             </div>
             <!-- form-group -->
           </div>
           <!-- col -->
-          <div class="col-md-6">
+          <div class="col-md-3">
             <div class="form-group">
-              <label for="telephone" class="formTitle">手機</label>
-              <input type="text" class="form-control input-lg" id="telephone" name="telephone" placeholder="手機">
+              <label for="enname" class="formTitle">英文名</label>
+              <input type="text" class="form-control input-lg" id="enname" name="enname" placeholder="I-CHUN">
             </div>
             <!-- form-group -->
           </div>
           <!-- col -->
-          <div class="col-md-6">
+          <div class="col-md-2">
             <div class="form-group">
-              <label for="identification" class="formTitle">身份證字號</label>
-              <input type="text" class="form-control input-lg" id="identification" name="identification" placeholder="身份證字號">
+              <label for="nationality" class="formTitle">國籍</label>
+              <select name="nationality" class="form-control input-lg">
+                <option>本國籍</option>
+                <option>非本國籍</option>
+              </select>
             </div>
             <!-- form-group -->
           </div>
           <!-- col -->
-          <div class="col-md-6">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="identification" class="formTitle">身份證字號(非本國籍請填護照號碼)</label>
+              <input type="text" class="form-control input-lg" id="identification" name="identification" placeholder="身份證字號(非本國籍請填護照號碼)">
+            </div>
+            <!-- form-group -->
+          </div>
+          <!-- col -->
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="gender" class="formTitle">性別</label>
+              <select name="gender" class="form-control input-lg">
+                <option>男</option>
+                <option>女</option>
+              </select>
+            </div>
+            <!-- form-group -->
+          </div>
+          <!-- col -->
+          <div class="col-md-3">
               <div class="form-group">
                   <label for="birthday" class="formTitle">生日(參與本活動需滿18歲)</label>
                   <div class='input-group date' id='birthday'>
@@ -89,7 +123,9 @@
                       </span>
                   </div>
               </div>
+              <!-- form group -->
           </div>
+          <!-- col -->
           <script type="text/javascript">
               $(function () {
                   $('#birthday').datetimepicker({
@@ -100,6 +136,54 @@
                   });
               });
           </script>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="employment" class="formTitle">職業</label>
+              <select name="employment" class="form-control input-lg">
+                <option>學生</option>
+                <option>工商人士</option>
+                <option>公教人員</option>
+                <option>退休公教人員</option>
+                <option>退休非公教人員</option>
+                <option>家管</option>
+                <option>其它</option>
+              </select>
+            </div>
+            <!-- form-group -->
+          </div>
+          <!-- col -->
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="education" class="formTitle">學歷</label>
+              <select name="education" class="form-control input-lg">
+                <option>博士</option>
+                <option>碩士</option>
+                <option>大學</option>
+                <option>專科</option>
+                <option>高中</option>
+                <option>國中</option>
+                <option>國小</option>
+              </select>
+            </div>
+            <!-- form-group -->
+          </div>
+          <!-- col -->
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="phone" class="formTitle">電話</label>
+              <input type="text" class="form-control input-lg" id="phone" name="phone" placeholder="電話">
+            </div>
+            <!-- form-group -->
+          </div>
+          <!-- col -->
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="telephone" class="formTitle">手機</label>
+              <input type="text" class="form-control input-lg" id="telephone" name="telephone" placeholder="手機">
+            </div>
+            <!-- form-group -->
+          </div>
+          <!-- col -->
           <div class="col-md-6">
             <div class="form-group">
               <label for="email" class="formTitle">E-mail</label>
@@ -108,12 +192,173 @@
             <!-- form-group -->
           </div>
           <!-- col -->
-          <div class="col-md-12">
+          <div class="col-md-6">
             <div class="form-group">
-              <label for="address" class="formTitle">地址</label>
-              <input type="text" class="form-control input-lg" id="address" name="address" placeholder="地址">
+              <label for="contacttime" class="formTitle">連絡時間(可複選)</label>
+              <select name="contacttime" class="form-control selectpicker" data-actions-box="true" multiple>
+                <option>早上09:00~12:00</option>
+                <option>下午14:00~17:00</option>
+                <option>晚上18:00~21:00</option>
+              </select>
             </div>
             <!-- form-group -->
+          </div>
+          <!-- col -->
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="emcontacter" class="formTitle">緊急聯絡人姓名</label>
+              <input type="text" class="form-control input-lg" id="emcontacter" name="emcontacter" placeholder="緊急聯絡人姓名">
+            </div>
+            <!-- form-group -->
+          </div>
+          <!-- col -->
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="emphone" class="formTitle">緊急聯絡人電話</label>
+              <input type="text" class="form-control input-lg" id="emphone" name="emphone" placeholder="緊急聯絡人電話">
+            </div>
+            <!-- form-group -->
+          </div>
+          <!-- col -->
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="emrelationship" class="formTitle">與緊急聯絡人關係</label>
+              <input type="text" class="form-control input-lg" id="emrelationship" name="emrelationship" placeholder="父子、兄弟、母女...">
+            </div>
+            <!-- form-group -->
+          </div>
+          <!-- col -->
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="language" class="formTitle">擅長外國語言(可複選)</label>
+              <select name="language" class="form-control selectpicker" data-actions-box="true" multiple>
+                <option>台語</option>
+                <option>國語</option>
+                <option>英語</option>
+                <option>法語</option>
+                <option>西班牙語</option>
+                <option>日語</option>
+                <option>德語</option>
+                <option>韓語</option>
+                <option>俄語</option>
+                <option>阿拉伯語</option>
+                <option>義大利語</option>
+                <option>土耳其語</option>
+                <option>葡萄牙語</option>
+              </select>
+            </div>
+            <!-- form-group -->
+          </div>
+          <!-- col -->
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="servicenumber" class="formTitle">服務紀錄冊冊號(若無請填無)</label>
+              <input type="text" class="form-control input-lg" id="servicenumber" name="servicenumber" placeholder="無">
+            </div>
+            <!-- form-group -->
+          </div>
+          <!-- col -->
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="volunteerexp" class="formTitle">志工實務經驗(可複選)</label>
+              <select name="volunteerexp" class="form-control selectpicker" data-actions-box="true" multiple>
+                <option>無</option>
+                <option>綜合服務</option>
+                <option>民政服務</option>
+                <option>社會服務</option>
+                <option>地政服務</option>
+                <option>警政服務</option>
+                <option>消防服務</option>
+                <option>教育服務</option>
+                <option>法務服務</option>
+                <option>交通服務</option>
+                <option>人事服務</option>
+                <option>新聞服務</option>
+                <option>衛生服務</option>
+                <option>環保服務</option>
+                <option>農業服務</option>
+                <option>文化服務</option>
+                <option>勞工服務</option>
+                <option>導覽服務</option>
+                <option>體育服務</option>
+                <option>客委服務</option>
+                <option>原住民服務</option>
+              </select>
+            </div>
+            <!-- form-group -->
+          </div>
+          <!-- col -->
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="certification" class="formTitle">救護技術原或護理人員證照</label>
+              <select name="certification" class="form-control input-lg">
+                <option>有</option>
+                <option>無</option>
+              </select>
+            </div>
+            <!-- form-group -->
+          </div>
+          <!-- col -->
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="gesture" class="formTitle">是否具備手語能力</label>
+              <select name="gesture" class="form-control input-lg">
+                <option>是</option>
+                <option>否</option>
+              </select>
+            </div>
+            <!-- form-group -->
+          </div>
+          <!-- col -->
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="skill" class="formTitle">專長(可複選)</label>
+              <select name="skill" class="form-control selectpicker" data-actions-box="true" multiple>
+                <option>無</option>
+                <option>多媒體應用</option>
+                <option>美編排版</option>
+                <option>資訊處理</option>
+                <option>電腦硬體</option>
+                <option>領隊導遊</option>
+                <option>緊急救護</option>
+                <option>文書處理</option>
+                <option>駕駛</option>
+                <option>電腦基本操作</option>
+                <option>智慧型手機基本操作</option>
+              </select>
+            </div>
+            <!-- form-group -->
+          </div>
+          <!-- col -->
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="address" class="formTitle">戶籍地址(郵遞區號3碼+地址)</label>
+              <input type="text" class="form-control input-lg" id="address" name="address" placeholder="413台中市霧峰區柳豐路500號">
+            </div>
+            <!-- form-group -->
+          </div>
+          <!-- col -->
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="contactaddress" class="formTitle">聯絡地址(郵遞區號3碼+地址) <input name="sameaddress" id="sameaddress" type="checkbox"  onclick="Filladdress(this.form)"> 同戶籍地址</label>
+              <input type="text" class="form-control input-lg" id="contactaddress" name="contactaddress" placeholder="413台中市霧峰區柳豐路500號">
+            </div>
+            <!-- form-group -->
+            <script>
+            function Filladdress(f) {
+              if (f.sameaddress.checked == true) {
+                f.contactaddress.value = f.address.value;
+              } else {
+                f.contactaddress.value = '';
+              }
+            }
+            </script>
           </div>
           <!-- col -->
           <div class="col-md-6">
