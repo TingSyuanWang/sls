@@ -1,6 +1,72 @@
 <?php
 	include("db_setting.php");
-		if (!@mysql_select_db("2018exporegister")) die("fail to connect to server!");
+	if (!@mysql_select_db("2018exporegister")) die("fail to connect to server!");
+	// 複選陣列轉換
+	$contacttime = $_POST["contacttime"];
+	$contacttimearray = implode("、", $contacttime);
+
+	$language = $_POST["language"];
+	$languagearray = implode("、", $language);
+
+	$volunteerexp = $_POST["volunteerexp"];
+	$volunteerexparray = implode("、", $volunteerexp);
+
+	$skill = $_POST["skill"];
+	$skillarray = implode("、", $skill);
+
+	$sql_query = "INSERT INTO testadvance (`surname`, `name`, `ensurname`, `enname`, `nationality`, `identification`, `gender`, `birthday`, `employment`, `education`, `phone`, `telephone`, `email`, `contacttime`, `emcontacter`, `emphone`, `emrelationship`, `language`, `servicenumber`, `volunteerexp`, `certification`, `gesture`, `skill`, `address`, `contactaddress`, `unit`, `position`, `food`, `event`, `basicYet`, `BasicEvent`, `attachment`) VALUES (";
+	$sql_query .=  "'".$_POST["surname"]."',";
+	$sql_query .=  "'".$_POST["name"]."',";
+	$sql_query .=  "'".$_POST["ensurname"]."',";
+	$sql_query .=  "'".$_POST["enname"]."',";
+	$sql_query .=  "'".$_POST["nationality"]."',";
+	$sql_query .=  "'".$_POST["identification"]."',";
+	$sql_query .=  "'".$_POST["gender"]."',";
+	$sql_query .=  "'".$_POST["birthday"]."',";
+	$sql_query .=  "'".$_POST["employment"]."',";
+	$sql_query .=  "'".$_POST["education"]."',";
+	$sql_query .=  "'".$_POST["phone"]."',";
+	$sql_query .=  "'".$_POST["telephone"]."',";
+	$sql_query .=  "'".$_POST["email"]."',";
+	$sql_query .=  "'".$contacttimearray."',";
+	$sql_query .=  "'".$_POST["emcontacter"]."',";
+	$sql_query .=  "'".$_POST["emphone"]."',";
+	$sql_query .=  "'".$_POST["emrelationship"]."',";
+	$sql_query .=  "'".$languagearray."',";
+	$sql_query .=  "'".$_POST["servicenumber"]."',";
+	$sql_query .=  "'".$volunteerexparray."',";
+	$sql_query .=  "'".$_POST["certification"]."',";
+	$sql_query .=  "'".$_POST["gesture"]."',";
+	$sql_query .=  "'".$skillarray."',";
+	$sql_query .=  "'".$_POST["address"]."',";
+	$sql_query .=  "'".$_POST["contactaddress"]."',";
+	$sql_query .=  "'".$_POST["unit"]."',";
+	$sql_query .=  "'".$_POST["position"]."',";
+	$sql_query .=  "'".$_POST["food"]."',";
+	$sql_query .=  "'".$_POST["event"]."',";
+	$sql_query .=  "'".$_POST["basicYet"]."',";
+	$sql_query .=  "'".$_POST["BasicEvent"]."',";
+	$sql_query .=  "'".date("YmdHis")."_".$_FILES['attachment']['name']."')";
+	$result = mysql_query($sql_query);
+	$uploadLabFile ="";
+	if ($_FILES['attachment']['name'] != '' && $_FILES['attachment']['error'] == 0)
+	{
+		$filename = str_replace(" ","",date("YmdHis")."_".$_FILES['attachment']['name']);
+		$uploadLabFile = $filename;
+		$pathFilename = iconv("UTF-8", "big5//TRANSLIT//IGNORE", $uploadLabFile);
+		move_uploaded_file($_FILES["attachment"]["tmp_name"], "./uploads/" .$pathFilename);
+	}
+	// $result = mysql_query("INSERT INTO testadvance (name) VALUES ('$_POST[name]')");
+	// if($result)
+	// {
+	// echo "Success";
+	// }
+	// else
+	// {
+	// echo "Error";
+	// }
+
+
 		// 寄信
 		$sendEmail = $_POST["email"];
 		$to = "$sendEmail"; //收件者
@@ -27,40 +93,6 @@
 		$headers = "Content-Type: text/html; charset=UTF-8". "\r\n";
 		$headers .= "From: 亞大花博伺服器-勿直接回信 <openstackicehousegeek@gmail.com>"; //寄件者
 		mail("$to", "$subject", "$message", "$headers");
-
-		$sql_query = "INSERT INTO testadvance (`name`, `phone`, `telephone`, `identification`, `birthday`, `email`, `address`, `unit`, `position`, `food`, `event`, `basicYet`, `BasicEvent`, `attachment`) VALUES (";
-		$sql_query .=  "'".$_POST["name"]."',";
-		$sql_query .=  "'".$_POST["phone"]."',";
-		$sql_query .=  "'".$_POST["telephone"]."',";
-		$sql_query .=  "'".$_POST["identification"]."',";
-		$sql_query .=  "'".$_POST["birthday"]."',";
-		$sql_query .=  "'".$_POST["email"]."',";
-		$sql_query .=  "'".$_POST["address"]."',";
-		$sql_query .=  "'".$_POST["unit"]."',";
-		$sql_query .=  "'".$_POST["position"]."',";
-		$sql_query .=  "'".$_POST["food"]."',";
-		$sql_query .=  "'".$_POST["event"]."',";
-		$sql_query .=  "'".$_POST["basicYet"]."',";
-		$sql_query .=  "'".$_POST["BasicEvent"]."',";
-    $sql_query .=  "'".date("YmdHis")."_".$_FILES['attachment']['name']."')";
-		$result = mysql_query($sql_query);
-    $uploadLabFile ="";
-  	if ($_FILES['attachment']['name'] != '' && $_FILES['attachment']['error'] == 0)
-  	{
-			$filename = str_replace(" ","",date("YmdHis")."_".$_FILES['attachment']['name']);
-  		$uploadLabFile = $filename;
-  		$pathFilename = iconv("UTF-8", "big5//TRANSLIT//IGNORE", $uploadLabFile);
-  		move_uploaded_file($_FILES["attachment"]["tmp_name"], "./uploads/" .$pathFilename);
-  	}
-		// $result = mysql_query("INSERT INTO testadvance (name) VALUES ('$_POST[name]')");
-		// if($result)
-		// {
-		// echo "Success";
-		// }
-		// else
-		// {
-		// echo "Error";
-		// }
 ?>
 
 	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

@@ -67,6 +67,10 @@ echo "
       <thead>
         	<tr>
             	<th>編號</th>
+              <th>語言</th>
+              <th>連絡時間(可複選)</th>
+              <th>志工實務經驗(可複選)</th>
+              <th>專長(可複選)</th>
               <th>姓名</th>
               <th>電話</th>
               <th>手機</th>
@@ -87,6 +91,10 @@ echo "
 while($row_result=mysql_fetch_assoc($result)) {
   echo "<tr>";
   echo "<td>".$row_result["id"]."</td>";
+  echo "<td>".$row_result["language"]."</td>";
+  echo "<td>".$row_result["contacttime"]."</td>";
+  echo "<td>".$row_result["volunteerexp"]."</td>";
+  echo "<td>".$row_result["skill"]."</td>";
   echo "<td>".$row_result["name"]."</td>";
   echo "<td>".$row_result["phone"]."</td>";
   echo "<td>".$row_result["telephone"]."</td>";

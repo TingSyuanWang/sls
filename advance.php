@@ -48,12 +48,12 @@
     <h1 class="text-center"><strong>志工特殊教育訓練報名</strong></h1>
     <h3 class="text-center"><a href="index.html">回主畫面</a></h3>
     <div class="container">
-      <form action="upload_file_advance.php" method="post" name="formadd" id="formadd" enctype="multipart/form-data" data-toggle="validator" role="form">
+      <form action="upload_file_advance.php" method="post" name="formadd" id="formadd" enctype="multipart/form-data" data-toggle="validator">
         <div class="row">
           <div class="col-md-3">
             <div class="form-group">
               <label for="surname" class="formTitle">中文姓</label>
-              <input type="text" class="form-control input-lg" id="surname" name="surname" placeholder="林">
+              <input type="text" class="form-control input-lg" id="surname" name="surname" placeholder="林" required>
             </div>
             <!-- form group -->
           </div>
@@ -61,7 +61,7 @@
           <div class="col-md-3">
             <div class="form-group">
               <label for="name" class="formTitle">中文名</label>
-              <input type="text" class="form-control input-lg" id="name" name="name" placeholder="怡君">
+              <input type="text" class="form-control input-lg" id="name" name="name" placeholder="怡君" required>
             </div>
             <!-- form-group -->
           </div>
@@ -69,7 +69,7 @@
           <div class="col-md-3">
             <div class="form-group">
               <label for="ensurname" class="formTitle">英文姓</label>
-              <input type="text" class="form-control input-lg" id="ensurname" name="ensurname" placeholder="LIN">
+              <input type="text" class="form-control input-lg" id="ensurname" name="ensurname" placeholder="LIN" required>
             </div>
             <!-- form-group -->
           </div>
@@ -77,7 +77,7 @@
           <div class="col-md-3">
             <div class="form-group">
               <label for="enname" class="formTitle">英文名</label>
-              <input type="text" class="form-control input-lg" id="enname" name="enname" placeholder="I-CHUN">
+              <input type="text" class="form-control input-lg" id="enname" name="enname" placeholder="I-CHUN" required>
             </div>
             <!-- form-group -->
           </div>
@@ -96,7 +96,7 @@
           <div class="col-md-4">
             <div class="form-group">
               <label for="identification" class="formTitle">身份證字號(非本國籍請填護照號碼)</label>
-              <input type="text" class="form-control input-lg" id="identification" name="identification" placeholder="身份證字號(非本國籍請填護照號碼)">
+              <input type="text" class="form-control input-lg" id="identification" name="identification" placeholder="身份證字號(非本國籍請填護照號碼)" required>
             </div>
             <!-- form-group -->
           </div>
@@ -171,7 +171,7 @@
           <div class="col-md-3">
             <div class="form-group">
               <label for="phone" class="formTitle">電話</label>
-              <input type="text" class="form-control input-lg" id="phone" name="phone" placeholder="電話">
+              <input type="text" class="form-control input-lg" id="phone" name="phone" placeholder="電話" required>
             </div>
             <!-- form-group -->
           </div>
@@ -179,7 +179,7 @@
           <div class="col-md-3">
             <div class="form-group">
               <label for="telephone" class="formTitle">手機</label>
-              <input type="text" class="form-control input-lg" id="telephone" name="telephone" placeholder="手機">
+              <input type="text" class="form-control input-lg" id="telephone" name="telephone" placeholder="手機" required>
             </div>
             <!-- form-group -->
           </div>
@@ -187,15 +187,15 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="email" class="formTitle">E-mail</label>
-              <input type="email" class="form-control input-lg" id="email" name="email" placeholder="E-mail">
+              <input type="email" class="form-control input-lg" id="email" name="email" placeholder="E-mail" required>
             </div>
             <!-- form-group -->
           </div>
           <!-- col -->
           <div class="col-md-6">
             <div class="form-group">
-              <label for="contacttime" class="formTitle">連絡時間(可複選)</label>
-              <select name="contacttime" class="form-control selectpicker" data-actions-box="true" multiple>
+              <label for="contacttime[]" class="formTitle">連絡時間(可複選)</label>
+              <select name="contacttime[]" class="form-control selectpicker" data-actions-box="true" multiple>
                 <option>早上09:00~12:00</option>
                 <option>下午14:00~17:00</option>
                 <option>晚上18:00~21:00</option>
@@ -209,7 +209,7 @@
           <div class="col-md-4">
             <div class="form-group">
               <label for="emcontacter" class="formTitle">緊急聯絡人姓名</label>
-              <input type="text" class="form-control input-lg" id="emcontacter" name="emcontacter" placeholder="緊急聯絡人姓名">
+              <input type="text" class="form-control input-lg" id="emcontacter" name="emcontacter" placeholder="緊急聯絡人姓名" required>
             </div>
             <!-- form-group -->
           </div>
@@ -217,7 +217,7 @@
           <div class="col-md-4">
             <div class="form-group">
               <label for="emphone" class="formTitle">緊急聯絡人電話</label>
-              <input type="text" class="form-control input-lg" id="emphone" name="emphone" placeholder="緊急聯絡人電話">
+              <input type="text" class="form-control input-lg" id="emphone" name="emphone" placeholder="緊急聯絡人電話" required>
             </div>
             <!-- form-group -->
           </div>
@@ -225,15 +225,15 @@
           <div class="col-md-4">
             <div class="form-group">
               <label for="emrelationship" class="formTitle">與緊急聯絡人關係</label>
-              <input type="text" class="form-control input-lg" id="emrelationship" name="emrelationship" placeholder="父子、兄弟、母女...">
+              <input type="text" class="form-control input-lg" id="emrelationship" name="emrelationship" placeholder="父子、兄弟、母女..." required>
             </div>
             <!-- form-group -->
           </div>
           <!-- col -->
           <div class="col-md-4">
             <div class="form-group">
-              <label for="language" class="formTitle">擅長外國語言(可複選)</label>
-              <select name="language" class="form-control selectpicker" data-actions-box="true" multiple>
+              <label for="language[]" class="formTitle">擅長外國語言(可複選)</label>
+              <select name="language[]" class="form-control selectpicker" data-actions-box="true" multiple>
                 <option>台語</option>
                 <option>國語</option>
                 <option>英語</option>
@@ -255,15 +255,15 @@
           <div class="col-md-4">
             <div class="form-group">
               <label for="servicenumber" class="formTitle">服務紀錄冊冊號(若無請填無)</label>
-              <input type="text" class="form-control input-lg" id="servicenumber" name="servicenumber" placeholder="無">
+              <input type="text" class="form-control input-lg" id="servicenumber" name="servicenumber" placeholder="無" required>
             </div>
             <!-- form-group -->
           </div>
           <!-- col -->
           <div class="col-md-4">
             <div class="form-group">
-              <label for="volunteerexp" class="formTitle">志工實務經驗(可複選)</label>
-              <select name="volunteerexp" class="form-control selectpicker" data-actions-box="true" multiple>
+              <label for="volunteerexp[]" class="formTitle">志工實務經驗(可複選)</label>
+              <select name="volunteerexp[]" class="form-control selectpicker" data-actions-box="true" multiple>
                 <option>無</option>
                 <option>綜合服務</option>
                 <option>民政服務</option>
@@ -316,8 +316,8 @@
           <!-- col -->
           <div class="col-md-4">
             <div class="form-group">
-              <label for="skill" class="formTitle">專長(可複選)</label>
-              <select name="skill" class="form-control selectpicker" data-actions-box="true" multiple>
+              <label for="skill[]" class="formTitle">專長(可複選)</label>
+              <select name="skill[]" class="form-control selectpicker" data-actions-box="true" multiple>
                 <option>無</option>
                 <option>多媒體應用</option>
                 <option>美編排版</option>
@@ -339,7 +339,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="address" class="formTitle">戶籍地址(郵遞區號3碼+地址)</label>
-              <input type="text" class="form-control input-lg" id="address" name="address" placeholder="413台中市霧峰區柳豐路500號">
+              <input type="text" class="form-control input-lg" id="address" name="address" placeholder="413台中市霧峰區柳豐路500號" required>
             </div>
             <!-- form-group -->
           </div>
@@ -347,7 +347,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="contactaddress" class="formTitle">聯絡地址(郵遞區號3碼+地址) <input name="sameaddress" id="sameaddress" type="checkbox"  onclick="Filladdress(this.form)"> 同戶籍地址</label>
-              <input type="text" class="form-control input-lg" id="contactaddress" name="contactaddress" placeholder="413台中市霧峰區柳豐路500號">
+              <input type="text" class="form-control input-lg" id="contactaddress" name="contactaddress" placeholder="413台中市霧峰區柳豐路500號" required>
             </div>
             <!-- form-group -->
             <script>
@@ -375,7 +375,7 @@
                   <!-- insert this line -->
                   <span class="input-group-addon" style="width:0px; padding-left:0px; padding-right:0px; border:none;"></span>
               </div>
-              <input type="text" class="form-control input-lg radioMarginFix" id="unit" name="unit" placeholder="">
+              <input type="text" class="form-control input-lg radioMarginFix" id="unit" name="unit" placeholder="" required>
               <script>
               $('#selectschool').change(function selectschool(){
                 var selectschool = $("#selectschool option:selected").text();
@@ -410,7 +410,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="position" class="formTitle"><p00></p00></label>
-              <input type="text" class="form-control input-lg inputMarginFix" id="position" name="position" placeholder="">
+              <input type="text" class="form-control input-lg inputMarginFix" id="position" name="position" placeholder="" required>
             </div>
             <!-- form-group -->
           </div>
@@ -822,7 +822,7 @@
           </div>
           <!-- col -->
           <div class="col-md-12 center-block buttonMarginFix">
-            <input id="submit" name="action" type="hidden" value="upload_file_advance.php" />
+            <input id="submit" name="submit" type="hidden" />
             <div class="text-center"><input id="submit001" type="submit" class="btn btn-primary btn-lg"></input></div>
           <script>
             $( "#submit001" ).click(function() {
