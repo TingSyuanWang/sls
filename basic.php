@@ -48,6 +48,44 @@
 </head>
 
 <body>
+  <script>
+    jQuery(document).ready(function(){
+        $('#agreement').modal('show');
+    });
+  </script>
+  <div class="modal fade" tabindex="-1" role="dialog" id="agreement" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">歡迎您參加2018臺中世界花卉博覽會導覽志工特殊培訓，本特殊訓需有基本審查機制，敬請您詳閱並請確認以下事項：</h3>
+        </div>
+        <div class="modal-body">
+          <p style="font-size:16px;">
+          1. 您已年滿18歲(1998/1/1之後出生者)。<br />
+          2. 對2018花博導覽志工具有熱忱及興趣。<br />
+          3. 具有溝通表達能力。<br />
+          4. 能配合值勤60小時以上者。 <br />
+          5. 能配合志工招募規定，接受訓練與評核。<br />
+          6. 本報名資料後續將移交給臺中市政府教育局，以利聯繫及志工使用。
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button  id="disagree" type="button" class="btn btn-default" data-dismiss="modal">我不同意</button>
+          <button id="agree" type="button" class="btn btn-primary">我同意</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  <script>
+  $( "#disagree" ).click(function() {
+    window.location.href = 'index.html';
+  });
+  $( "#agree" ).click(function() {
+    $('#agreement').modal('hide')
+  });
+  </script>
+
+
     <img src="images/logo_2018expo.png" class="img-responsive center-block" alt="2018花博志工導覽報名系統">
     <h1 class="text-center"><strong>志工基礎訓練報名</strong></h1>
     <h3 class="text-center"><a href="index.html">回主畫面</a></h3>
