@@ -95,7 +95,7 @@
           <div class="col-md-3">
             <div class="form-group">
               <label for="surname" class="formTitle">中文姓</label>
-              <input type="text" class="form-control input-lg" id="surname" name="surname" placeholder="林" required>
+              <input type="text" class="form-control input-lg" id="surname" name="surname" placeholder="林">
             </div>
             <!-- form group -->
           </div>
@@ -103,7 +103,7 @@
           <div class="col-md-3">
             <div class="form-group">
               <label for="name" class="formTitle">中文名</label>
-              <input type="text" class="form-control input-lg" id="name" name="name" placeholder="怡君" required>
+              <input type="text" class="form-control input-lg" id="name" name="name" placeholder="怡君">
             </div>
             <!-- form-group -->
           </div>
@@ -111,7 +111,7 @@
           <div class="col-md-3">
             <div class="form-group">
               <label for="ensurname" class="formTitle">英文姓</label>
-              <input type="text" class="form-control input-lg" id="ensurname" name="ensurname" placeholder="LIN" required>
+              <input type="text" class="form-control input-lg" id="ensurname" name="ensurname" placeholder="LIN">
             </div>
             <!-- form-group -->
           </div>
@@ -119,7 +119,7 @@
           <div class="col-md-3">
             <div class="form-group">
               <label for="enname" class="formTitle">英文名</label>
-              <input type="text" class="form-control input-lg" id="enname" name="enname" placeholder="I-CHUN" required>
+              <input type="text" class="form-control input-lg" id="enname" name="enname" placeholder="I-CHUN">
             </div>
             <!-- form-group -->
           </div>
@@ -138,7 +138,7 @@
           <div class="col-md-4">
             <div class="form-group">
               <label for="identification" class="formTitle">身份證字號(非本國籍請填護照號碼)</label>
-              <input type="text" class="form-control input-lg" id="identification" name="identification" placeholder="身份證字號(非本國籍請填護照號碼)" required>
+              <input type="text" class="form-control input-lg" id="identification" name="identification" placeholder="身份證字號(非本國籍請填護照號碼)">
             </div>
             <!-- form-group -->
           </div>
@@ -213,7 +213,7 @@
           <div class="col-md-3">
             <div class="form-group">
               <label for="phone" class="formTitle">電話</label>
-              <input type="text" class="form-control input-lg" id="phone" name="phone" placeholder="電話" required>
+              <input type="text" class="form-control input-lg" id="phone" name="phone" placeholder="電話">
             </div>
             <!-- form-group -->
           </div>
@@ -221,7 +221,7 @@
           <div class="col-md-3">
             <div class="form-group">
               <label for="telephone" class="formTitle">手機</label>
-              <input type="text" class="form-control input-lg" id="telephone" name="telephone" placeholder="手機" required>
+              <input type="text" class="form-control input-lg" id="telephone" name="telephone" placeholder="手機">
             </div>
             <!-- form-group -->
           </div>
@@ -229,7 +229,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="email" class="formTitle">E-mail</label>
-              <input type="email" class="form-control input-lg" id="email" name="email" placeholder="E-mail" required>
+              <input type="email" class="form-control input-lg" id="email" name="email" placeholder="E-mail">
             </div>
             <!-- form-group -->
           </div>
@@ -251,7 +251,7 @@
           <div class="col-md-4">
             <div class="form-group">
               <label for="emcontacter" class="formTitle">緊急聯絡人姓名</label>
-              <input type="text" class="form-control input-lg" id="emcontacter" name="emcontacter" placeholder="緊急聯絡人姓名" required>
+              <input type="text" class="form-control input-lg" id="emcontacter" name="emcontacter" placeholder="緊急聯絡人姓名">
             </div>
             <!-- form-group -->
           </div>
@@ -259,7 +259,7 @@
           <div class="col-md-4">
             <div class="form-group">
               <label for="emphone" class="formTitle">緊急聯絡人電話</label>
-              <input type="text" class="form-control input-lg" id="emphone" name="emphone" placeholder="緊急聯絡人電話" required>
+              <input type="text" class="form-control input-lg" id="emphone" name="emphone" placeholder="緊急聯絡人電話">
             </div>
             <!-- form-group -->
           </div>
@@ -267,7 +267,7 @@
           <div class="col-md-4">
             <div class="form-group">
               <label for="emrelationship" class="formTitle">與緊急聯絡人關係</label>
-              <input type="text" class="form-control input-lg" id="emrelationship" name="emrelationship" placeholder="父子、兄弟、母女..." required>
+              <input type="text" class="form-control input-lg" id="emrelationship" name="emrelationship" placeholder="父子、兄弟、母女...">
             </div>
             <!-- form-group -->
           </div>
@@ -297,7 +297,7 @@
           <div class="col-md-4">
             <div class="form-group">
               <label for="servicenumber" class="formTitle">服務紀錄冊冊號(若無請填無)</label>
-              <input type="text" class="form-control input-lg" id="servicenumber" name="servicenumber" placeholder="無" required>
+              <input type="text" class="form-control input-lg" id="servicenumber" name="servicenumber" placeholder="無">
             </div>
             <!-- form-group -->
           </div>
@@ -381,7 +381,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="address" class="formTitle">戶籍地址(郵遞區號3碼+地址)</label>
-              <input type="text" class="form-control input-lg" id="address" name="address" placeholder="413台中市霧峰區柳豐路500號" required>
+              <input type="text" class="form-control input-lg" id="address" name="address" placeholder="413台中市霧峰區柳豐路500號">
             </div>
             <!-- form-group -->
           </div>
@@ -389,7 +389,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="contactaddress" class="formTitle">聯絡地址(郵遞區號3碼+地址) <input name="sameaddress" id="sameaddress" type="checkbox"  onclick="Filladdress(this.form)"> 同戶籍地址</label>
-              <input type="text" class="form-control input-lg" id="contactaddress" name="contactaddress" placeholder="413台中市霧峰區柳豐路500號" required>
+              <input type="text" class="form-control input-lg" id="contactaddress" name="contactaddress" placeholder="413台中市霧峰區柳豐路500號">
             </div>
             <!-- form-group -->
             <script>
@@ -417,7 +417,7 @@
                   <!-- insert this line -->
                   <span class="input-group-addon" style="width:0px; padding-left:0px; padding-right:0px; border:none;"></span>
               </div>
-              <input type="text" class="form-control input-lg radioMarginFix" id="unit" name="unit" placeholder="" required>
+              <input type="text" class="form-control input-lg radioMarginFix" id="unit" name="unit" placeholder="">
               <script>
               $('#selectschool').change(function selectschool(){
                 var selectschool = $("#selectschool option:selected").text();
@@ -449,7 +449,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="position" class="formTitle"><p00></p00></label>
-              <input type="text" class="form-control input-lg inputMarginFix" id="position" name="position" placeholder="" required>
+              <input type="text" class="form-control input-lg inputMarginFix" id="position" name="position" placeholder="">
             </div>
             <!-- form-group -->
           </div>
@@ -469,7 +469,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="food" class="formTitle">飲食習慣</label>
-              <select name="food" class="form-control input-lg" required>
+              <select name="food" class="form-control input-lg">
                 <option>葷食</option>
                 <option>素食</option>
               </select>
@@ -480,7 +480,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="event" class="formTitle">報名場次&nbsp;<a href="http://website/2018expo/%E5%9F%B9%E8%A8%93%E5%A0%B4%E6%AC%A1/" target="_blank">(了解培訓資訊場次及時間)</a></label>
-              <select id="selectevent" name="event" class="form-control input-lg" required>
+              <select id="selectevent" name="event" class="form-control input-lg">
                 <option>
                   請選擇
                 </option>
@@ -723,6 +723,12 @@
             <!-- <button id="singlebutton" name="submit" class="btn btn-primary center-block btn-lg">
                 送出資料
             </button> -->
+            <script>
+              // 送出資料顯示跳轉頁面
+              $("submit001").click(function(){
+                $(this).after("<img src='images/gears.svg' alt='loading' />").fadeIn();
+              });
+            </script>
           </div>
           <div class="col-md-12">
             <div class="well well-lg fontChange">

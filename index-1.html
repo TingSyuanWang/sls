@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!--
+   #                 .-~~~~~~~~~-._       _.-~~~~~~~~~-.
+   #             __.'              ~.   .~              `.__
+   #           .'//                  \./                  \\`.
+   #         .'//                     |                     \\`.
+   #       .'// .-~"""""""~~~~-._     |     _,-~~~~"""""""~-. \\`.
+   #     .'//.-"                 `-.  |  .-'                 "-.\\`.
+   #   .'//______.============-..   \ | /   ..-============.______\\`.
+   # .'______________________________\|/______________________________`.
+   #
+                            書本保佑  永無BUG
+-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>2018臺中世界花卉博覽會導覽志工報名系統</title>
+	<link rel="shortcut icon" type="image/png" href="images/favicon-16x16.png"/>
+	<!-- bootstrap -->
+	<script type="text/javascript" src="bower_components/jquery/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+	<script src="js/bootstrap.js"></script>
+	<!-- custom css/js -->
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script src="js/style.js"></script>
+	<!-- marquee script -->
+	<script type="text/javascript" src="bower_components/jquery.marquee/jquery.marquee.min.js"></script>
+	<script type="text/javascript" src="bower_components/jquery.marquee/jquery.pause.js"></script>
+	<!-- responsive setting -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	<div class="container">
+		<img src="images/logo_2018expo.png" class="img-responsive center-block" alt="2018花博志工導覽報名系統" height="100">
+		<h1 class="text-center">導覽志工報名系統</h1>
+		<br />
+		<div class="row">
+			<div class="col-md-12">
+				<div class="marquee hidden-sm hidden-xs" id="marquee1"><b>【公告】</b>11/13科博館場次，因人數不足，故取消該場次培訓。不便之處，敬請見諒。</div>
+				<div class="marquee hidden-md hidden-lg" id="marquee2"><b>【公告】</b>11/13科博館場次，因人數不足，故取消該場次培訓。不便之處，敬請見諒。</div>
+				<script>
+				setInterval(function(){
+				    $('#marquee1').marquee('toggle');
+				},2000);
+				$('#marquee1').marquee({
+					//speed in milliseconds of the marquee
+					duration: 2000,
+					//gap in pixels between the tickers
+					gap: 0,
+					//time in milliseconds before the marquee will start animating
+					delayBeforeStart: 0,
+					//'left' or 'right'
+					direction: 'up',
+					//true or false - should the marquee be duplicated to show an effect of continues flow
+					duplicated: true
+				});
+				$('#marquee2').marquee({
+					//speed in milliseconds of the marquee
+					duration: 5000,
+					//gap in pixels between the tickers
+					gap: 50,
+					//time in milliseconds before the marquee will start animating
+					delayBeforeStart: 0,
+					//'left' or 'right'
+					direction: 'left',
+					//true or false - should the marquee be duplicated to show an effect of continues flow
+					duplicated: true
+				});
+				</script>
+			</div>
+		</div>
+		<br />
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-success">
+  				<div class="panel-heading">
+						<h2> 志工基礎教育訓練</h2>
+						<br />
+						<p class="registerPostFix">
+							※ 年滿18歲(以上)且對花博導覽志工有興趣之人士皆可以報名。<br />
+							※ 培訓場次若遇人數不足或過多，主辦單位得視情況取消或增加場次。不便之處敬請見諒。<br />&nbsp;
+						</p>
+						<p class="text-center"><a class="btn btn-primary btn-lg" href="basic.php" role="button">我要報名</a></p>
+					</div>
+				</div>
+			</div>
+			<!-- col -->
+			<div class="col-md-12">
+				<div class="panel panel-danger">
+  				<div class="panel-heading">
+						<h2>志工特殊教育訓練</h2>
+						<br />
+						<p class="registerPostFix">
+							※ 年滿18歲(以上)且對花博導覽志工有興趣之人士，且已上完基礎教育訓練者，皆可以報名。<br />
+							※ 培訓場次若遇人數不足或過多，主辦單位得視情況取消或增加場次。不便之處敬請見諒。<br />&nbsp;
+						</p>
+						<p class="text-center"><a class="btn btn-primary btn-lg" href="advance.php" role="button">我要報名</a></p>
+					</div>
+				</div>
+			</div>
+			<!-- col -->
+		</div>
+		<!-- row -->
+		<div class="row">
+			<div class="col-md-12">
+				<div class="well well-lg">
+					<h2 class="text-center">2018臺中世界花卉博覽會─導覽志工培訓</h2><br /><br />
+					<img src="images/procedure.png" class="img-responsive" alt="Responsive image">
+				</div>
+			</div>
+			<!-- col -->
+		</div>
+		<!-- row -->
+		<div class="row">
+			<div class="col-md-6">
+				<div class="well">
+					<h2 class="text-center">基礎訓場次</h2>
+					<h3 style="line-height: 60px;">
+					第一場次 105.11.05(六)-06(日) 中國醫藥大學<br />
+					第二場次 105.11.05(六)-06(日) 亞洲大學<br />
+					第三場次 105.12.03(六)-04(日) 靜宜大學<br />
+					第四場次 105.12.03(六)-04(日) 科博館<br />
+					第五場次 105.12.10(六)-11(日) 亞洲大學<br />
+					第六場次 105.12.10(六)-11(日) 豐原高中
+					</h3>
+				</div>
+			</div>
+			<!-- col -->
+			<div class="col-md-6">
+				<div class="well">
+					<h2 class="text-center">特殊訓場次</h2>
+					<h3 style="line-height: 60px;">
+					第一場次 105.10.30(日) 亞洲大學<br />
+					第二場次 105.11.12(六) 中國醫藥大學<br />
+					<span class="deleteLine">第三場次 105.11.13(日) 科博館</span>(已更改場次)<br />
+					第四場次 105.11.16(三)-17(四) 亞洲大學<br />
+					第五場次 105.11.20(日) 科博館<br />
+					第六場次 105.11.26(六) 豐原高中<br />
+					第七場次 105.11.27(日) 科博館<br />
+					第八場次 105.11.30(三)-12.01(四) 亞洲大學<br />
+					第九場次 105.12.17(六) 中國醫藥大學<br />
+					第十場次 105.12.18(日) 豐原高中<br />
+					第十一場次 105.12.24(六) 靜宜大學<br />
+					第十二場次 105.12.24(六) 科博館
+					</h3>
+				</div>
+			</div>
+			<!-- col -->
+		</div>
+		<!-- row -->
+	</div>
+	<!-- container -->
+</body>
+
+</html>
